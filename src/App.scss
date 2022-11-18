@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+// Reset
+body, p, ul, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+address {
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    font-family: inherit;
+    margin: 0;
+}
+
+input:focus,
+a:focus-visible,
+select:focus {
+    outline: none;
+}
+
+::placeholder {
+    opacity: 1;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    padding: 0;
+
+    &:active,
+    &:not(:active) {
+        border: 0;
+    }
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+select {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Buttons
+.btn {
+    text-transform: uppercase;
+    padding: 0 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    height: 40px;
+    box-sizing: border-box;
+    transition: all 0.15s linear;
+}
+
+.btn-default {
+    color: rgba(0,0,0,0.85);
+    border: 1px solid #dedede;
+}
+
+.btn-primary {
+    color: #fff;
+    background: #f1625f;
+
+    &:hover {
+        background: darken(#f1625f, 5%);
+    }
+}
+
+.btn-success {
+    color: #fff;
+    background: #419b18;
+
+    &:hover {
+        background: darken(#419b18, 5%);
+    }
+}
+
+// Inputs
+.input {
+    border: 1px solid #dedede;
+    height: 40px;
+    background: #fff;
+    padding: 0 10px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    color: inherit;
+
+    &::placeholder {
+        color: inherit;
+        opacity: 1;
+    }
+}
+
+[type="checkbox"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+
+    &::after {
+        content:'';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 1px solid #dedede;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}
+
+[type="radio"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+
+    &::after {
+        content:'';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 1px solid #dedede;
+        border-radius: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}
+
+select {
+    transition: all 0.5s linear;
+    border: 1px solid #dedede;
+    height: 40px;
+    padding: 0 10px;
+}
+
+// Container
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 300px;
+}

@@ -1,0 +1,30 @@
+#header-search {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    background:  #fff;
+
+    form {
+        font-size: 0;
+    }
+
+    .input {
+        width: 100%;
+        border-color: transparent;
+        background: rgba(0,0,0,0.05);
+        height: 50px;
+        border-radius: 0;
+    }
+
+    .btn {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        height: 50px;
+
+        svg {
+            height: 18px;
+        }
+    }
+}

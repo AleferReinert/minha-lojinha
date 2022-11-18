@@ -1,0 +1,23 @@
+@import '../../Variables.scss';
+
+.social {
+    font-size: 0;
+
+    svg {
+        height: 26px;
+        transition: all 0.15s linear;
+    }
+
+    a:hover svg {
+        color: $color-primary;
+    }
+
+    li {
+        margin-top: 0;
+        display: inline-block;
+
+        +li {
+            margin-left: 12px;
+        }
+    }
+}

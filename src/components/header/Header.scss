@@ -1,0 +1,376 @@
+@import '../../Variables.scss';
+
+// Header
+#menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+    background: rgba(0,0,0,0.85);
+    z-index: 2;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr max-content;
+    transition: left 0.25s linear;
+
+    &.hidden {
+        left: -100%;
+    }
+
+    .btn-close-menu-mobile {
+        grid-column: 2;
+        align-self: flex-start;
+        padding: 0 10px;
+
+        [class*="fa-"] {
+            color: #fff;
+            font-size: $font-26px;
+            padding: 15px;
+        }
+    }
+
+    .nav-login {
+        background: #fff;
+        border-bottom: 4px solid $color-border;
+        grid-column: 1;
+        grid-row: 1;
+
+        > ul {
+
+            > li {
+                border-bottom: 1px solid $color-border;
+
+                > a,
+                > button {
+                    color: #000;
+                    display: block;
+                    padding: $column-gap;
+                    position: relative;
+                    width: 100%;
+                    text-align: left;
+                    font-size: $font-16px;
+
+                    [class*="icon-"] { 
+                        position: absolute;
+                        right: $column-gap;
+                        top: $column-gap;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+
+    #list-profile {
+        background: $color-border;
+        padding: 10px 0;
+
+        a {
+            display: block;
+            padding: 10px ($column-gap * 3);
+        }
+    }
+}
+
+#header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    z-index: 2;
+    box-shadow: 0 5px 5px 0px rgba(0,0,0,0.05);
+
+    .bar-top {
+        background: rgba(0,0,0,0.035);
+        font-size: $font-12px;
+
+        nav {
+            display: none;
+        }
+    }
+
+    .dropdown-account {
+        background: #fff;
+        position: absolute;
+        right: 0;
+        border: 1px solid $color-border;
+        text-align: left;
+        z-index: 2;
+        width: max-content;
+        font-size: $font-13px;
+        letter-spacing: 0.5px;
+        color: rgba(0,0,0,0.65);
+        padding: 0;
+
+        a + a {
+            border-top: 1px solid $color-border;
+        }
+
+        a {
+            display: block;
+            padding: 12px 15px;
+            transition: all 0.15s linear;
+
+            .fa {
+                width: 17px;
+                text-align: center;
+                margin-right: 3px;
+                transition: all 0.15s linear;
+            }
+            
+            &:hover {
+                color: #000;
+            }
+        }
+
+        // Seta
+        $arrow-width: 5px;
+        $arrow-height: 5px;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            border-width: $arrow-height $arrow-width;
+            border-style: solid;
+            border-color: transparent transparent #fff;
+            position: absolute;
+            top: -($arrow-height * 2);
+            right: 10px;
+            cursor: pointer;
+        }
+
+        &::before {
+            border-width: ($arrow-height + 1) ($arrow-width + 1);
+            top: -(($arrow-height * 2) + 2);
+            right: 9px;
+            border-color: transparent transparent $color-border;
+        }
+    }
+
+    .bar-middle {
+        padding: 15px 0;
+        position: relative;
+        background: #fff;
+        
+        .container {
+            display: grid;
+            grid-template-columns: max-content auto 0 max-content max-content;
+            align-items: center;
+            grid-column-gap: $column-gap;
+            max-width: none;
+        }
+
+        .btn-menu-mobile {
+            font-size: $font-20px;
+
+            svg {
+                height: 30px;
+            }
+        }
+
+        .logo {
+
+            a {
+                display: inline-block;
+            }
+
+            img {
+                max-height: 34px;
+                vertical-align: middle;
+            }
+        }
+
+        [data-target="#header-search"] {
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .cart, 
+        .favorites {
+            position: relative;
+            display: flex;
+        }
+
+        .favorites {
+            display: none;
+        }
+
+        .quantity {
+            $size: 20px;
+
+            background: $color-primary;
+            border-radius: 100%;
+            text-align: center;
+            color: #fff;
+            width: $size;
+            height: $size;
+            position: absolute;
+            top: -6px;
+            right: -10px;
+            font: 400 #{$font-10px}/#{$size} $font-primary;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .bar-bottom {
+        background: #fff;
+        position: relative;
+        transition: all 0.15s linear;
+        z-index: -1;
+    }
+}
+
+@media all and (min-width: $breakpoint-medium) {
+
+    #header {
+
+        .bar-middle {
+
+            .container {
+                grid-template-columns: max-content max-content auto max-content max-content;
+                grid-column-gap: $column-gap * 2;
+            }
+
+            [data-target="#header-search"] {
+                display: none;
+            }
+
+            .favorites {
+                display: flex;
+                align-items: center;
+                line-height: 30px;
+
+                svg {
+                    float: right;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        #header-search {
+            display: block !important;
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            background: transparent;
+
+            .input {
+                height: 40px;
+                border-color: $color-border;
+                background: #fff;
+                border-radius: $form-radius;
+            }
+
+            .btn {
+                height: 40px;
+
+                .svg-search {
+
+                    path {
+                        fill: rgba(0,0,0,0.85);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (min-width: $breakpoint-large) {
+
+    #header {
+
+        .bar-top {
+
+            .dropdown-account-btn {
+                border: 0;
+                background: transparent;
+                padding: 0;
+                text-transform: none;
+                color: rgba(0,0,0);
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: center;
+            }
+
+            nav {
+                display: block;
+                text-align: right;
+                grid-column: 3;
+    
+                > ul > li {
+                    position: relative;
+                    display: inline-block;
+    
+                    + li {
+                        margin-left: 20px;
+                    }
+    
+                    > a {
+                        display: inline-block;
+        
+                        .fa {
+                            margin-right: 3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bar-middle {
+            padding: 20px 0;
+
+            .container {
+                grid-template-columns: max-content auto max-content max-content;
+                max-width: $container-large;
+
+                .column {
+                    grid-row: 1;
+
+                    &:first-child {
+                        display: none;
+                    }
+                }
+            }
+
+            .logo {
+
+                img {
+                    max-height: 40px;
+                }
+            }
+        }
+
+        .bar-bottom {
+            position: relative;
+            background: $color-primary;
+        }
+    }
+}
+
+@media all and (min-width: $breakpoint-extralarge) {
+
+    #header {
+
+        .bar-middle {
+
+            .container {
+                max-width: $container-extralarge;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../Variables.scss';
+
+.carousel-header {
+    text-align: center;
+    padding: 10px 0;
+    overflow: hidden;
+    text-transform: $capitalization;
+}
+
+@media all and (min-width: $breakpoint-large) {
+    
+    .carousel-header {
+        grid-column: 2;
+    }
+}
