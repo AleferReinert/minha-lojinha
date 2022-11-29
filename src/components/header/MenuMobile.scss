@@ -1,0 +1,107 @@
+@import '../../Variables.scss';
+#overlay {
+    background: rgba(0,0,0,.75);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity .35s linear .35s, left .35s linear .7s;
+
+    &.active {
+        opacity: 1;
+        left: 0;
+        transition: opacity .35s linear;
+    }
+}
+
+#menu-mobile {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 2;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr max-content;
+    transition: all .35s linear;
+    
+    &.active {
+        left: 0;
+    }
+
+    .btn-close {
+        padding: 18px 15px 16px 15px;
+        opacity: 1;
+        filter: invert(1);
+    }
+
+    .nav-user {
+        background: #fff;
+        border-bottom: 4px solid $color-border;
+        grid-column: 1;
+        grid-row: 1;
+
+        li {
+
+            a {
+                color: #000;
+                display: block;
+                padding: $column-gap;
+                position: relative;
+                width: 100%;
+                text-align: left;
+                font-size: $font-16px;
+            }
+        }
+
+        li>a>svg {
+            margin-right: 10px;
+        }
+    }
+
+    #nav-account {
+
+        a {
+            display: block;
+            padding: 10px 0;
+
+            span:first-child {
+                width: 20px;
+                display: inline-block;
+                text-align: center;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .accordion-item {
+        border-left: 0;
+        border-right: 0;
+        border-color: $color-border;
+    }
+
+    .accordion-button {
+        padding: 15px;
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    .accordion-body {
+        background: $color-border;
+        padding: 10px 0 10px 12px;
+    }
+}
+
+@media all and (min-width: $breakpoint-large) {
+
+    #menu-mobile {
+        display: none;
+    }
+}

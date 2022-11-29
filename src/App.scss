@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
+@import 'Variables.scss';
 // Reset
 body, p, ul, h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -68,6 +68,30 @@ select {
 img {
     max-width: 100%;
     height: auto;
+}
+
+// Bootstrap reset
+.btn-close:focus,
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: inherit
+}
+
+.btn-close,
+.accordion-item:last-of-type {
+    border-radius: 0;
+}
+
+.accordion-body {
+    border-top: 1px solid $color-border;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='inherit'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
 // Buttons

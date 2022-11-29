@@ -1,78 +1,5 @@
 @import '../../Variables.scss';
 
-// Header
-#menu-mobile {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100% !important;
-    background: rgba(0,0,0,0.85);
-    z-index: 2;
-    display: grid;
-    grid-template-rows: max-content;
-    grid-template-columns: 1fr max-content;
-    transition: left 0.25s linear;
-
-    &.hidden {
-        left: -100%;
-    }
-
-    .btn-close-menu-mobile {
-        grid-column: 2;
-        align-self: flex-start;
-        padding: 0 10px;
-
-        [class*="fa-"] {
-            color: #fff;
-            font-size: $font-26px;
-            padding: 15px;
-        }
-    }
-
-    .nav-login {
-        background: #fff;
-        border-bottom: 4px solid $color-border;
-        grid-column: 1;
-        grid-row: 1;
-
-        > ul {
-
-            > li {
-                border-bottom: 1px solid $color-border;
-
-                > a,
-                > button {
-                    color: #000;
-                    display: block;
-                    padding: $column-gap;
-                    position: relative;
-                    width: 100%;
-                    text-align: left;
-                    font-size: $font-16px;
-
-                    [class*="icon-"] { 
-                        position: absolute;
-                        right: $column-gap;
-                        top: $column-gap;
-                        line-height: 19px;
-                    }
-                }
-            }
-        }
-    }
-
-    #list-profile {
-        background: $color-border;
-        padding: 10px 0;
-
-        a {
-            display: block;
-            padding: 10px ($column-gap * 3);
-        }
-    }
-}
-
 #header {
     background: #fff;
     position: fixed;
@@ -83,11 +10,15 @@
     box-shadow: 0 5px 5px 0px rgba(0,0,0,0.05);
 
     .bar-top {
-        background: rgba(0,0,0,0.035);
+        background: #f6f6f6;
         font-size: $font-12px;
 
         nav {
             display: none;
+
+            svg {
+                margin-right: 6px;
+            }
         }
     }
 
@@ -186,8 +117,8 @@
         [data-target="#header-search"] {
 
             svg {
-                width: 30px;
-                height: 30px;
+                width: 20px;
+                height: 20px;
             }
         }
 
@@ -195,6 +126,10 @@
         .favorites {
             position: relative;
             display: flex;
+        }
+
+        .cart {
+            margin-right: 4px;
         }
 
         .favorites {
@@ -220,13 +155,6 @@
             width: 20px;
             height: 20px;
         }
-    }
-
-    .bar-bottom {
-        background: #fff;
-        position: relative;
-        transition: all 0.15s linear;
-        z-index: -1;
     }
 }
 
@@ -347,11 +275,12 @@
                 }
             }
 
-            .logo {
+            .logo img {
+                max-height: 40px;
+            }
 
-                img {
-                    max-height: 40px;
-                }
+            .cart {
+                margin-right: 0;
             }
         }
 
@@ -364,13 +293,7 @@
 
 @media all and (min-width: $breakpoint-extralarge) {
 
-    #header {
-
-        .bar-middle {
-
-            .container {
-                max-width: $container-extralarge;
-            }
-        }
+    #header .bar-middle .container {
+        max-width: $container-extralarge;
     }
 }
