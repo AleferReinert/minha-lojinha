@@ -72,7 +72,8 @@ img {
 
 // Bootstrap reset
 .btn-close:focus,
-.accordion-button:focus {
+.accordion-button:focus,
+.accordion-header {
     box-shadow: none;
 }
 

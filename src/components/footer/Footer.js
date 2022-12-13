@@ -1,5 +1,6 @@
 import './Footer.scss';
 import { Social } from './Social';
+import { Accordion } from 'react-bootstrap';
 
 export function Footer() {
     return (
@@ -7,17 +8,57 @@ export function Footer() {
             <div className="bar-top">
                 <nav className="container">
                     <div className="site-map">
-                        <div className="column">
+                        <Accordion defaultActiveKey="-1">
+                            <Accordion.Item  eventKey="0">
+                                <Accordion.Header>
+                                    Institucional
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                    <ul className="list">
+                                        <li><a href="./">Lojas</a></li>
+                                        <li><a href="./">Sobre nós</a></li>
+                                        <li><a href="./">Trabalhe conosco</a></li>
+                                        <li><a href="./">Blog</a></li>
+                                    </ul>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item  eventKey="1">
+                                <Accordion.Header>
+                                    Ajuda e suporte
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                    <ul className="list">
+                                        <li><a href="/prazos-de-entrega">Prazos de entrega</a></li>
+                                        <li><a href="/trocas-e-devolucoes">Trocas e devoluções</a></li>
+                                        <li><a href="/perguntas-frequentes">Perguntas Frequentes</a></li>
+                                        <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
+                                    </ul>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item  eventKey="2">
+                                <Accordion.Header>
+                                    Contato
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                    <ul className="list">
+                                        <li><a href="./">Tel.: (47) 55555-5555</a></li>
+                                        <li><a href="./">Tel.2: (47) 55555-5555</a></li>
+                                        <li><a href="./">E-mail: atendimento@loja.com.br</a></li>
+                                    </ul>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+                        {/* <div className="column">
                             <h2 data-toggle="collapse" className="collapsed" data-target="#list-about" data-parent=".site-map">
                                 Institucional
                                 <span className="fa fa-angle-down icon-collapsed"></span>
                                 <span className="fa fa-angle-up icon-show"></span>
                             </h2>
                             <ul className="list collapse" id="list-about">
-                                <li><a href="#">Lojas</a></li>
-                                <li><a href="/sobre-nos">Sobre nós</a></li>
-                                <li><a href="#">Trabalhe conosco</a></li>
-                                <li><a href="#">Blog</a></li>
+                                <li><a href="./">Lojas</a></li>
+                                <li><a href="./">Sobre nós</a></li>
+                                <li><a href="./">Trabalhe conosco</a></li>
+                                <li><a href="./">Blog</a></li>
                             </ul>
                         </div>
                         <div className="column">
@@ -40,15 +81,15 @@ export function Footer() {
                                 <span className="fa fa-angle-up icon-show"></span>
                             </h2>
                             <ul className="list collapse" id="list-contact">
-                                <li><a href="#">Tel.: (47) 55555-5555</a></li>
-                                <li><a href="#">Tel.2: (47) 55555-5555</a></li>
-                                <li><a href="#">E-mail: atendimento@loja.com.br</a></li>
+                                <li><a href="./">Tel.: (47) 55555-5555</a></li>
+                                <li><a href="./">Tel.2: (47) 55555-5555</a></li>
+                                <li><a href="./">E-mail: atendimento@loja.com.br</a></li>
                             </ul>
-                        </div>
-                        <div className="column">
+                        </div>*/}
+                        <div className="column column-social">
                             <h2>Social</h2>
                             <Social />
-                        </div>
+                        </div> 
                     </div>
                 </nav>
             </div>
