@@ -9,6 +9,15 @@
     z-index: 2;
     box-shadow: 0 5px 5px 0px rgba(0,0,0,0.05);
 
+    .btn-menu-mobile {
+        font-size: $font-20px;
+        display: flex;
+
+        svg {
+            height: 30px;
+        }
+    }
+
     .bar-top {
         background: #f6f6f6;
         font-size: $font-12px;
@@ -94,14 +103,6 @@
             max-width: none;
         }
 
-        .btn-menu-mobile {
-            font-size: $font-20px;
-
-            svg {
-                height: 30px;
-            }
-        }
-
         .logo {
 
             a {
@@ -181,33 +182,6 @@
                 svg {
                     float: right;
                     margin-left: 5px;
-                }
-            }
-        }
-
-        #header-search {
-            display: block !important;
-            position: relative;
-            top: auto;
-            left: auto;
-            right: auto;
-            background: transparent;
-
-            .input {
-                height: 40px;
-                border-color: $color-border;
-                background: #fff;
-                border-radius: $form-radius;
-            }
-
-            .btn {
-                height: 40px;
-
-                .svg-search {
-
-                    path {
-                        fill: rgba(0,0,0,0.85);
-                    }
                 }
             }
         }

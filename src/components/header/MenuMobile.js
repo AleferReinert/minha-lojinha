@@ -7,7 +7,7 @@ import { Accordion } from "react-bootstrap";
 export function MenuMobile(props){
 
     function closeMenu(){
-        props.setMenuActive(null);
+        props.setMenuMobile(null);
     }
 
     const navUser = () => {
@@ -59,14 +59,14 @@ export function MenuMobile(props){
     };
     return (
         <>
-            <div id="menu-mobile" className={props.menuActive}>
+            <div id="menu-mobile" className={props.menuMobile}>
                 <button className="btn-close" onClick={closeMenu}></button>
                 <nav className="nav-user">
                     { navUser() }
                 </nav>
                 <Categories id="categories-mobile" />
             </div>
-            <div id="overlay" className={props.menuActive}></div>
+            <div id="overlay" className={props.menuMobile}></div>
         </>
     );
 }

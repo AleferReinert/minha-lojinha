@@ -1,9 +1,18 @@
+@import '../../Variables.scss';
+
 #header-search {
     position: absolute;
-    top: 55px;
+    top: 64px;
     left: 0;
     right: 0;
     background:  #fff;
+    max-height: 0;
+    transition: max-height $transition-duration linear;
+    overflow: hidden;
+
+    &.active {
+        max-height: 50px;
+    }
 
     form {
         font-size: 0;
@@ -25,6 +34,34 @@
 
         svg {
             height: 18px;
+        }
+    }
+}
+
+@media all and (min-width: $breakpoint-medium) {
+
+    #open-search-mobile,
+    #close-search-mobile {
+        display: none;
+    }
+
+    #header-search {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        background: transparent;
+        max-height: none;
+
+        .input {
+            height: 40px;
+            border-color: $color-border;
+            background: #fff;
+            border-radius: $form-radius;
+        }
+
+        .btn {
+            height: 40px;
         }
     }
 }
