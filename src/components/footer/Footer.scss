@@ -3,30 +3,24 @@
 [class*="icon-"] {
     background-image: url(../../sprite.png);
     display: block;
+    width: 44px;
+    height: 35px;
 }
 
 .icon-amex {
     background-position: 0px -70px;
-    width: 44px;
-    height: 35px;
 }
 
 .icon-boleto {
     background-position: -44px -70px;
-    width: 44px;
-    height: 35px;
 }
 
 .icon-diners {
     background-position: -108px 0px;
-    width: 44px;
-    height: 35px;
 }
 
 .icon-elo {
     background-position: -108px -35px;
-    width: 44px;
-    height: 35px;
 }
 
 .icon-google-security {
@@ -37,20 +31,14 @@
 
 .icon-hipercard {
     background-position: -108px -70px;
-    width: 44px;
-    height: 35px;
 }
 
 .icon-mastercard {
     background-position: 0px -105px;
-    width: 44px;
-    height: 35px;
 }
 
 .icon-pix {
     background-position: -44px -105px;
-    width: 44px;
-    height: 35px;
 }
 
 .icon-ssl-security {
@@ -61,8 +49,6 @@
 
 .icon-visa {
     background-position: -88px -105px;
-    width: 44px;
-    height: 35px;
 }
 
 // Footer
@@ -74,104 +60,111 @@ $space-vertical: 20px;
     text-align: center;
 
     .bar-top {
-        padding: 0 0 0;
+        padding: 0;
 
         .container {
             padding: 0;
         }
+    }
 
-        .site-map {
-            display: grid;
-            font-size: $font-16px;
+    .site-map {
+        font-size: $font-16px;
 
-            .accordion-button {
-                background-color: transparent;
-                text-align: center;
+        .column-social {
+            display: none;
+        }
+
+        .accordion-button {
+            background-color: transparent;
+            text-align: center;
+            padding: $column-gap;
+        }
+        
+        .accordion-item {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid $color-border;
+        }
+
+        h2,
+        .accordion-button {
+            font-weight: 600;
+            text-transform: $capitalization;
+            letter-spacing: 0.25px;
+            font-size: inherit;
+            position: relative;
+            display: block;
+
+            &::after {
+                position: absolute;
+                right: $column-gap;
+                top: 15px;
             }
             
-            .accordion-item {
-                background-color: transparent;
-                border: 0;
-                border-bottom: 1px solid $color-border;
-            }
-
-            h2,
-            .accordion-button {
-                font-weight: 600;
-                text-transform: $capitalization;
-                letter-spacing: 0.25px;
-                font-size: inherit;
-                position: relative;
-                display: block;
-
-                &::after {
-                    position: absolute;
-                    right: $column-gap;
-                    top: 15px;
-                }
-            }
-
             .accordion-body {
                 border: 0;
                 padding: 0;
             }
+        }
 
-            .list {
-                padding: 0 0 15px;
+        .list {
 
-                a {
-                    font-size: inherit;
-                    line-height: $font-24px;
-                }
-            }
-            .column {
-                padding: 13px 0;
-                border-bottom: 1px solid $color-border;
-            }
-            
-            .column-social h2 {
-                display: none;
+            a {
+                font-size: inherit;
+                line-height: $font-24px;
             }
         }
+
+        // .column {
+        //     padding: 13px 0;
+        //     border-bottom: 1px solid $color-border;
+        // }
+    }
+    
+    .bar-social {
+        padding: 15px 0;
+        border-bottom: 1px solid $color-border;
     }
 
     .bar-middle {
+        padding: $column-gap 0;
+    }
+        
+    .payments {
+        padding-bottom: $column-gap;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
 
-        .payments {
-            margin: $space-vertical;
-            display: grid;
-            grid-template-columns: repeat(4, auto);
-            justify-content: center;
-            grid-column-gap: 5px;
-
-            .icon {
-                background-color: #f4f4f4;
-            }
+        .icon {
+            background-color: #f4f4f4;
         }
+    }
 
-        .security {
-            margin-bottom: $space-vertical;
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            justify-content: center;
-            grid-column-gap: 20px;
-        }
+    .security {
+        padding-bottom: $column-gap;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        grid-column-gap: 20px;
+    }
 
-        .developed {
-            font-size: $font-12px;
-            margin: 0 -$column-gap;
-            border-top: 1px solid $color-border;
-            padding: $space-vertical 0;
+    .developed {
+        font-size: $font-12px;
+        margin: 0 (-$column-gap);
+        border-top: 1px solid $color-border;
+        padding-top: $column-gap;
 
-            &:first-line {
-                font-size: $font-10px;
-            }
+        &:first-line {
+            font-size: $font-10px;
         }
     }
 
     .bar-bottom {
         border-top: 1px solid $color-border;
-        padding: $space-vertical 0;
+        padding: $column-gap 0;
 
         .address,
         p {
@@ -184,9 +177,14 @@ $space-vertical: 20px;
 
     #footer {
 
+        .bar-top .container {
+            max-width: none;
+        }
+        
         .bar-middle {
-
+            
             .container {
+                max-width: none;
                 display: grid;
                 grid-template-columns: 2;
                 align-items: center;
@@ -207,58 +205,57 @@ $space-vertical: 20px;
 
     #footer {
 
-        >[class*="bar-"] {
-            padding: 30px 0;
+        > [class*="bar-"] {
+            padding: 20px 0;
         }
 
-        .bar-top {
-            border-bottom: 1px solid $color-border;
-
-            .site-map {
+        .site-map {
+            grid-column-gap: $column-gap * 2;
+            font-size: $font-14px;
+            
+            .accordion {
+                display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                grid-column-gap: $column-gap * 2;
-                font-size: $font-14px;
 
-                h2 {
+                .collapse {
+                    display: block;
+                }
+
+                .accordion-button {
                     cursor: text;
-                }
+                    padding-top: 0;
 
-                .column {
-                    margin: 0;
-                    border: 0;
-                    padding: 0;
-
-                    .list {
-                        display: block !important;
-                        padding-bottom: 0;
-                    }
-
-                    &:last-child {
-                        grid-column: 1/4;
+                    &::after {
+                        display: none;
                     }
                 }
-            }
 
-            .social {
-                margin-top: 25px;
+                .accordion-item {
+                    border-bottom: 0;
+                }
+
+                .accordion-body {
+                    border-top: 0;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
             }
+        }
+
+        .bar-social {
+            border-top: 1px solid $color-border;
         }
 
         .bar-middle {
-            padding: $space-vertical 0;
 
             >.container {
                 grid-template-columns: repeat(3, max-content);
-                grid-column-gap: $column-gap * 2;
-                justify-content: space-between;
+                justify-content: space-around;
             }
 
-            .payments {
-                margin: 0;
-            }
-
+            .payments,
             .security {
-                margin: 0;
+                padding: 0;
             }
 
             .developed {
@@ -280,56 +277,57 @@ $space-vertical: 20px;
             padding: 30px 0;
         }
 
-        .bar-bottom {
-            padding: 15px 0;
+        .bar-top .container,
+        .bar-middle .container {
+            max-width: $container-large;
+            padding: 0 $column-gap;
         }
 
         .bar-top {
             border-bottom: 1px solid $color-border;
+        }
 
-            .container {
-                max-width: $container-large;
-                padding: 0 $column-gap;
+        .bar-middle > .container {
+            justify-content: space-between;
+        }
+
+        .site-map {
+            grid-column-gap: 0;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            text-align: left;
+
+            .accordion {
+                grid-template-columns: repeat(3, 1fr);
             }
 
-            .site-map {
-                grid-template-columns: repeat(3, 1fr) auto;
-                grid-column-gap: $column-gap * 2;
+            .accordion-button,
+            .accordion-body {
                 text-align: left;
-
-                .column {
-                    border: 0;
-
-                    &:last-child {
-                        grid-column: auto;
-
-                        >h2 {
-                            display: block;
-                        }
-                    }
-                }
+                padding-left: 0;
+                padding-right: 0;
             }
 
-            .social {
-                margin-top: 10px;
-                font-size: $font-20px;
-
+            .column-social {
+                display: block;
+                
+                .social {
+                    font-size: $font-20px;
+                    margin-top: 10px;
+                }
+    
                 li+li {
                     margin-left: 8px;
                 }
             }
         }
 
-        .bar-middle {
+        .bar-social {
+            display: none;
+        }
 
-            .container {
-                max-width: $container-large;
-                padding: 0 $column-gap;
-            }
-
-            .payments {
-                display: flex;
-            }
+        .payments {
+            display: flex;
         }
     }
 }
