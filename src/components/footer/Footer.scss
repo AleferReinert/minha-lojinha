@@ -1,7 +1,7 @@
 @import '../../Variables.scss';
 
 [class*="icon-"] {
-    background-image: url(../../sprite.png);
+    background-image: url('~/public/sprite.png');
     display: block;
     width: 44px;
     height: 35px;
@@ -58,6 +58,7 @@ $space-vertical: 20px;
     background: rgba(0, 0, 0, 0.015);
     border-top: 1px solid $color-border;
     text-align: center;
+    margin-top: 50px;
 
     .bar-top {
         padding: 0;

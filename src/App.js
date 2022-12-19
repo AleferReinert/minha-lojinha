@@ -2,35 +2,37 @@ import React from 'react';
 import './App.scss';
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
-
-// function screenWidth(){
-//   const width = window.screen.width;
-//   if(width > 576){
-//     return 'sm'
-//   } else if(width >= 768){
-//     return 'md'
-//   } else if(width >= 992){
-//     return 'lg'
-//   } else if(width >= 1200){
-//     return 'xl'
-//   } else if(width >= 1400){
-//     return 'xxl'
-//   }
-// }
+import { ProductList } from './components/ProductList';
+import { Newsletter } from './components/Newsletter';
 
 const user = {
-  firstName: 'João',
-  lastName: 'da Silva',
-  age: 28
+    firstName: 'João',
+    lastName: 'da Silva',
+    age: 28
 }
 
 function App() {
-  return (
-    <div className="App">
-      <Header isLoggedIn={true} username={user.firstName} />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header isLoggedIn={true} username={user.firstName} />
+            <section className='container'>
+                <div className="title-section">
+                    <h1>Populares</h1>
+                </div>
+                <ProductList />
+            </section>
+            <section className='container'>
+                <div className="title-section">
+                    <h1>Melhores ofertas</h1>
+                </div>
+                <ProductList />
+            </section>
+            <div className="container">
+                <Newsletter />
+            </div>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

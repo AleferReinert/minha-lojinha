@@ -1,0 +1,59 @@
+@import '../Variables.scss';
+
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $column-gap * 2;
+    grid-row-gap: $column-gap * 2;
+    font-size: $font-16px;
+
+    li {
+        position: relative;
+
+        &:hover {
+
+            img {
+                opacity: 1;
+            }
+        }
+    }
+    
+    img {
+        aspect-ratio: 3/4;
+        margin-bottom: 5px;
+        opacity: 0.9;
+        transition: opacity $transition-duration linear;
+        background-color: #ccc;
+    }
+    
+    .title {
+        font-size: $font-14px;
+        font-weight: 400;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        margin-right: 5px;
+    }
+
+    .price {
+        color: $color-success;
+        font-weight: 500;
+    }
+
+    .discount {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        color: #fff;
+        padding: 2px 8px;
+        background-color: $color-black-default;
+        font-size: $font-12px;
+    }
+}
+
+@media all and (min-width: $breakpoint-medium) {
+    .product-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

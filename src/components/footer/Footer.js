@@ -30,7 +30,7 @@ export function Footer() {
                                     <ul className="list">
                                         <li><a href="/prazos-de-entrega">Prazos de entrega</a></li>
                                         <li><a href="/trocas-e-devolucoes">Trocas e devoluções</a></li>
-                                        <li><a href="/perguntas-frequentes">Perguntas Frequentes</a></li>
+                                        <li><a href="/perguntas-frequentes">Perguntas frequentes</a></li>
                                         <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
                                     </ul>
                                 </Accordion.Body>

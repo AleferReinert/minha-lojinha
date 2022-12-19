@@ -5,12 +5,20 @@ body, p, ul, h1, h2, h3, h4, h5, h6, address {
     margin: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 ul {
     padding: 0;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
     color: inherit;
 }
 
@@ -193,13 +201,25 @@ select {
 }
 
 // Container
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
+// .container {
+//     width: 100%;
+//     margin: 0 auto;
+//     padding: 0 15px;
+//     box-sizing: border-box;
+// }
 
-body {
-    padding-top: 300px;
+.title-section {
+    text-align: center;
+    padding: 30px 0 26px;
+    display: flex;
+    justify-content: center;
+    
+    h1 {
+        border-bottom: 1px solid $color-primary;
+        font-size: $font-20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 2px;
+
+    }
 }
