@@ -2,8 +2,10 @@ import React from 'react';
 import './App.scss';
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
+import { BannerCarouselDesktop } from './components/BannerCarouselDesktop';
 import { ProductList } from './components/ProductList';
 import { Newsletter } from './components/Newsletter';
+import { BannerCarouselMobile } from './components/BannerCarouselMobile';
 
 const user = {
     firstName: 'João',
@@ -15,6 +17,8 @@ function App() {
     return (
         <div className="App">
             <Header isLoggedIn={true} username={user.firstName} />
+            <BannerCarouselMobile />
+            <BannerCarouselDesktop />
             <section className='container'>
                 <div className="title-section">
                     <h1>Populares</h1>

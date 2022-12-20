@@ -1,0 +1,7 @@
+@import '../Variables.scss';
+
+@media all and (min-width: $breakpoint-medium) {
+    .banner-carousel-mobile {
+        display: none;
+    }
+}

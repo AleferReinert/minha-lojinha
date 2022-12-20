@@ -108,6 +108,23 @@ img {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='inherit'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
+// Bolinhas do carousel
+.carousel-indicators {
+    margin-bottom: 0;
+
+    [data-bs-target] {
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        opacity: 0.85;
+        border-width: 7px 10px;
+    }
+
+    .active {
+        background-color: $color-primary;
+    }
+}
+
 // Buttons
 .btn {
     text-transform: uppercase;
@@ -204,14 +221,6 @@ select {
     height: 40px;
     padding: 0 10px;
 }
-
-// Container
-// .container {
-//     width: 100%;
-//     margin: 0 auto;
-//     padding: 0 15px;
-//     box-sizing: border-box;
-// }
 
 .title-section {
     text-align: center;

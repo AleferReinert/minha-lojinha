@@ -9,23 +9,15 @@
 
     li {
         position: relative;
-
-        &:hover {
-
-            img {
-                opacity: 1;
-            }
-        }
     }
-    
+
     img {
         aspect-ratio: 3/4;
         margin-bottom: 5px;
-        opacity: 0.9;
         transition: opacity $transition-duration linear;
         background-color: #ccc;
     }
-    
+
     .title {
         font-size: $font-14px;
         font-weight: 400;
@@ -55,5 +47,13 @@
 @media all and (min-width: $breakpoint-medium) {
     .product-list {
         grid-template-columns: repeat(4, 1fr);
+
+        img {
+            opacity: 0.9;
+        }
+
+        li:hover img {
+            opacity: 1;
+        }
     }
 }
