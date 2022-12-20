@@ -81,8 +81,13 @@ img {
 // Bootstrap reset
 .btn-close:focus,
 .accordion-button:focus,
-.accordion-header {
+.accordion-header,
+.form-control:focus {
     box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: $color-black-default;
 }
 
 .accordion-button:not(.collapsed) {

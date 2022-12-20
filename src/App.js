@@ -27,9 +27,7 @@ function App() {
                 </div>
                 <ProductList />
             </section>
-            <div className="container">
-                <Newsletter />
-            </div>
+            <Newsletter />
             <Footer />
         </div>
     );
