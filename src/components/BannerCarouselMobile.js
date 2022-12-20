@@ -12,7 +12,7 @@ const Banner = props => {
 export function BannerCarouselMobile() {
     return (
         <div className="banner-carousel-mobile">
-            <Carousel controls={false}>
+            <Carousel controls={false} fade={true} interval={3000}>
                 <Carousel.Item>
                     <Banner
                         url='./'

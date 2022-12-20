@@ -12,7 +12,7 @@ const Banner = props => {
 export function BannerCarouselDesktop() {
     return (
         <div className="banner-carousel-desktop">
-            <Carousel>
+            <Carousel fade={true} interval={3000}>
                 <Carousel.Item>
                     <Banner
                         url='./'
