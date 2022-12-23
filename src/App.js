@@ -7,6 +7,7 @@ import { ProductList } from './components/ProductList';
 import { Newsletter } from './components/Newsletter';
 import { BannerCarouselMobile } from './components/BannerCarouselMobile';
 import { BrandsCarousel } from './components/BrandsCarousel';
+import { BackToTheTopOfThePage } from './components/BackToTheTopOfThePage';
 
 const user = {
     firstName: 'João',
@@ -41,6 +42,7 @@ function App() {
             </section>
             <Newsletter />
             <Footer />
+            <BackToTheTopOfThePage />
         </div>
     );
 }
