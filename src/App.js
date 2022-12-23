@@ -6,6 +6,7 @@ import { BannerCarouselDesktop } from './components/BannerCarouselDesktop';
 import { ProductList } from './components/ProductList';
 import { Newsletter } from './components/Newsletter';
 import { BannerCarouselMobile } from './components/BannerCarouselMobile';
+import { BrandsCarousel } from './components/BrandsCarousel';
 
 const user = {
     firstName: 'João',
@@ -21,13 +22,20 @@ function App() {
             <BannerCarouselDesktop />
             <section className='container'>
                 <div className="title-section">
-                    <h1>Populares</h1>
+                    <h1>Melhores ofertas</h1>
                 </div>
                 <ProductList />
             </section>
             <section className='container'>
                 <div className="title-section">
-                    <h1>Melhores ofertas</h1>
+                    <h1>Mais vendidos</h1>
+                </div>
+                <ProductList />
+            </section>
+            <BrandsCarousel />
+            <section className='container'>
+                <div className="title-section">
+                    <h1>Lançamentos</h1>
                 </div>
                 <ProductList />
             </section>
