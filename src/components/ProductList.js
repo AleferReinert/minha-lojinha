@@ -1,11 +1,12 @@
 import './ProductList.scss';
+import { Link } from 'react-router-dom';
 
 export function ProductList() {
     let list = [];
     for (let i = 0; i < 4; i++) {
         list.push(
             <li key={i}>
-                <a href="./">
+                <Link to="/">
                     <img src="./product.jpg" alt="Lorem ipsum dolor" />
                     <h2 className='title'>Lorem ipsum dolor</h2>
                     <p>
@@ -13,7 +14,7 @@ export function ProductList() {
                         <span className='price'>R$ 89,90</span>
                         <span className="discount">-33%</span>
                     </p>
-                </a>
+                </Link>
             </li>
         )
     }

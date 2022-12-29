@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
-    "@fortawesome/free-solid-svg-icons": "^6.2.1"
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "react-router-dom": "^6.6.1"
   }
 }

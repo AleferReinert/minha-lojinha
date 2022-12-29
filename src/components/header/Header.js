@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Header.scss';
 import { MenuMobile } from './MenuMobile';
 import { TextCarousel } from './TextCarousel';
@@ -8,6 +8,7 @@ import { faCartShopping, faBars, faMagnifyingGlass, faClose } from '@fortawesome
 import { faHeart as faHeartO } from '@fortawesome/free-regular-svg-icons';
 import { Categories } from './Categories';
 import { DropdownUser } from './DropdownUser';
+import { Link } from "react-router-dom";
 
 export function Header(props) {
     const [menuMobile, setMenuMobile] = useState(null);
@@ -64,9 +65,9 @@ export function Header(props) {
                     </div>
                     <div className="column">
                         <div className="logo">
-                            <a href="./">
+                            <Link to="/">
                                 <img src={process.env.PUBLIC_URL + '/logo.png'} alt="minha lojinha" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="column">
@@ -74,17 +75,16 @@ export function Header(props) {
                     </div>
                     <div className="column">
                         { btnSearchMobile() }
-
-                        <a href="./" className="favorites" title="Lista de desejos (2 itens)">
+                        <Link to="/lista-de-desejos" className="favorites" title="Lista de desejos (2 itens)">
                             Lista de desejos
                             <FontAwesomeIcon icon={faHeartO} />
-                        </a>
+                        </Link>
                     </div>
                     <div className="column">
-                        <a href="./" className="cart" title="Meu carrinho de compras">
+                        <Link to="/carrinho" className="cart" title="Meu carrinho de compras">
                             <span className="quantity">18</span>
                             <FontAwesomeIcon icon={faCartShopping} />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

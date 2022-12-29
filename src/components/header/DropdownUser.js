@@ -1,6 +1,7 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser, faHeart, faSignOutAlt, faUserPlus, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 export function DropdownUser(props){
     if(props.isLoggedIn){
@@ -29,10 +30,10 @@ export function DropdownUser(props){
                     </Dropdown>
                 </li>
                 <li>
-                    <a href="./">
+                    <Link to="/">
                         <FontAwesomeIcon icon={faSignOutAlt} />
                         Sair
-                    </a>
+                    </Link>
                 </li>
             </ul>
         )
@@ -40,16 +41,16 @@ export function DropdownUser(props){
         return(
             <ul>
                 <li>
-                    <a href="./">
+                    <Link to="/">
                         <FontAwesomeIcon icon={faUserPlus} />
                         Cadastre-se
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/login">
+                    <Link to="/login">
                         <FontAwesomeIcon icon={faSignInAlt} />
                         Entrar
-                    </a>
+                    </Link>
                 </li>
             </ul>
         )

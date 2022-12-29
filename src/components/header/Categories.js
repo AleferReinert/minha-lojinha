@@ -1,16 +1,17 @@
 import './Categories.scss';
+import { Link } from 'react-router-dom';
 
 export function Categories(props) {
     return (
         <nav id={props.id}>
-            <a href="./categoria?category=masculino">Masculino</a>
-            <a href="./categoria?category=feminino">Feminino</a>
-            <a href="./categoria?category=infantil">Infantil</a>
-            <a href="./categoria?category=básico">Básico</a>
-            <a href="./categoria?category=esportes">Esportes</a>
-            <a href="./categoria?category=novidades">Novidades</a>
-            <a href="./categoria?category=ofertas">Ofertas</a>
-            <a href="./categoria?category=outlet">Outlet</a>
+            <Link to="/categoria/masculino">Masculino</Link>
+            <Link to="/categoria/feminino">Feminino</Link>
+            <Link to="/categoria/infantil">Infantil</Link>
+            <Link to="/categoria/básico">Básico</Link>
+            <Link to="/categoria/esportes">Esportes</Link>
+            <Link to="/categoria/novidades">Novidades</Link>
+            <Link to="/categoria/ofertas">Ofertas</Link>
+            <Link to="/categoria/outlet">Outlet</Link>
         </nav>
     )
 }

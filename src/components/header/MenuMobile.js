@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faSignOutAlt, faShoppingCart, faHeart } from '@fortawesome/free-solid-svg-icons';
 import './MenuMobile.scss';
 import { Accordion } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export function MenuMobile(props){
 
@@ -23,36 +24,36 @@ export function MenuMobile(props){
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <nav id="nav-account">
-                                        <a href="./">
+                                        <Link to="/">
                                             <span><FontAwesomeIcon icon={faUser} /></span>
                                             <span>Meus Dados</span>
-                                        </a>
-                                        <a href="./">
+                                        </Link>
+                                        <Link to="/">
                                             <span><FontAwesomeIcon icon={faShoppingCart} /></span>
                                             <span>Meus Pedidos</span>
-                                        </a>
-                                        <a href="./">
+                                        </Link>
+                                        <Link to="/">
                                             <span><FontAwesomeIcon icon={faHeart} /></span>
                                             <span>Lista de Desejos</span>
-                                        </a>
+                                        </Link>
                                     </nav>
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
                     </li>
                     <li>
-                        <a href="./">
+                        <Link to="/">
                             <FontAwesomeIcon icon={faSignOutAlt} />
                             Sair
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             )
         } else {
             return(
                 <ul>
-                    <li><a href="/login">Entrar</a></li>
-                    <li><a href="./">Cadastre-se</a></li>
+                    <li><Link to="/login">Entrar</Link></li>
+                    <li><Link to="/">Cadastre-se</Link></li>
                 </ul>
             )
         }

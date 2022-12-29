@@ -1,6 +1,7 @@
 import './Footer.scss';
 import { Social } from './Social';
 import { Accordion } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
     return (
@@ -15,10 +16,10 @@ export function Footer() {
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <ul className="list">
-                                        <li><a href="./">Lojas</a></li>
-                                        <li><a href="./">Sobre nós</a></li>
-                                        <li><a href="./">Trabalhe conosco</a></li>
-                                        <li><a href="./">Blog</a></li>
+                                        <li><Link to="/lojas">Lojas</Link></li>
+                                        <li><Link to="/sobre">Sobre nós</Link></li>
+                                        <li><Link to="/trabalhe-conosco">Trabalhe conosco</Link></li>
+                                        <li><a href="/" target='_blank'>Blog</a></li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -28,10 +29,10 @@ export function Footer() {
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <ul className="list">
-                                        <li><a href="/prazos-de-entrega">Prazos de entrega</a></li>
-                                        <li><a href="/trocas-e-devolucoes">Trocas e devoluções</a></li>
-                                        <li><a href="/perguntas-frequentes">Perguntas frequentes</a></li>
-                                        <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
+                                        <li><Link to="/prazos-de-entrega">Prazos de entrega</Link></li>
+                                        <li><Link to="/trocas-e-devolucoes">Trocas e devoluções</Link></li>
+                                        <li><Link to="/perguntas-frequentes">Perguntas frequentes</Link></li>
+                                        <li><Link to="/politica-de-privacidade">Política de privacidade</Link></li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Item>
