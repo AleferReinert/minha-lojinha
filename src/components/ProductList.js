@@ -7,7 +7,7 @@ export function ProductList() {
         list.push(
             <li key={i}>
                 <Link to="/">
-                    <img src="./product.jpg" alt="Lorem ipsum dolor" />
+                    <img src={process.env.PUBLIC_URL + '/product.jpg'} alt="Lorem ipsum dolor" />
                     <h2 className='title'>Lorem ipsum dolor</h2>
                     <p>
                         <span className='old-price'>R$ 59,90</span>

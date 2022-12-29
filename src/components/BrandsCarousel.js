@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Brand = props => {
     return (
         <Link to='/' title={props.title}>
-            <img src={'./brands/' + props.src} alt={props.title} />
+            <img src={process.env.PUBLIC_URL + '/brands/' + props.src} alt={props.title} />
         </Link>
     )
 }

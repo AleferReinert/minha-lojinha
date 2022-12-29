@@ -17,21 +17,21 @@ export function BannerCarouselDesktop() {
                 <Carousel.Item>
                     <Banner
                         url='/'
-                        src='./banners/banner-1-desktop.jpg'
+                        src={process.env.PUBLIC_URL + '/banners/banner-1-desktop.jpg'}
                         description='Confira nossas ofertas'
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <Banner
                         url='/'
-                        src='./banners/banner-2-desktop.jpg'
+                        src={process.env.PUBLIC_URL + '/banners/banner-2-desktop.jpg'}
                         description='Linha infantil'
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <Banner
                         url='/'
-                        src='./banners/banner-3-desktop.jpg'
+                        src={process.env.PUBLIC_URL + '/banners/banner-3-desktop.jpg'}
                         description='Lançamentos 2023'
                     />
                 </Carousel.Item>

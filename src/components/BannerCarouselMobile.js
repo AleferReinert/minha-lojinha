@@ -17,21 +17,21 @@ export function BannerCarouselMobile() {
                 <Carousel.Item>
                     <Banner
                         url='/'
-                        src='./banners/banner-1-mobile.jpg'
+                        src={process.env.PUBLIC_URL + '/banners/banner-1-mobile.jpg'}
                         description='Confira nossas ofertas'
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <Banner
                         url='/'
-                        src='./banners/banner-2-mobile.jpg'
+                        src={process.env.PUBLIC_URL + '/banners/banner-2-mobile.jpg'}
                         description='Linha infantil'
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <Banner
                         url='/'
-                        src='./banners/banner-3-mobile.jpg'
+                        src={process.env.PUBLIC_URL + '/banners/banner-3-mobile.jpg'}
                         description='Lançamentos 2023'
                     />
                 </Carousel.Item>
