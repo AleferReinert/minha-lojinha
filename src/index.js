@@ -7,6 +7,7 @@ import NoPage from "./pages/NoPage";
 import Cart from "./pages/Cart";
 import Favorites from './pages/Favorites';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProductDetails from './pages/ProductDetails';
 
 export default function App() {
     return (
@@ -17,6 +18,7 @@ export default function App() {
                     <Route path="*" element={<NoPage />} />
                     <Route path="/carrinho" element={<Cart />} />
                     <Route path="/lista-de-desejos" element={<Favorites />} />
+                    <Route path="/detalhes-do-produto" element={<ProductDetails />} />
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -6,12 +6,12 @@ export function ProductList() {
     for (let i = 0; i < 4; i++) {
         list.push(
             <li key={i}>
-                <Link to="/">
+                <Link to="/detalhes-do-produto">
                     <img src={process.env.PUBLIC_URL + '/product.jpg'} alt="Lorem ipsum dolor" />
                     <h2 className='title'>Lorem ipsum dolor</h2>
                     <p>
-                        <span className='old-price'>R$ 59,90</span>
-                        <span className='price'>R$ 89,90</span>
+                        <span className='price'>R$ 59,90</span>
+                        <span className='old-price'>R$ 89,90</span>
                         <span className="discount">-33%</span>
                     </p>
                 </Link>

@@ -30,17 +30,18 @@
         font-size: $font-14px;
         font-weight: 400;
     }
-
-    .old-price {
-        text-decoration: line-through;
-        margin-right: 5px;
-    }
-
+    
     .price {
+        margin-right: 5px;
         color: $color-success;
         font-weight: 500;
     }
-
+    
+    .old-price {
+        text-decoration: line-through;
+        color: #999;
+    }
+    
     .discount {
         position: absolute;
         top: 8px;

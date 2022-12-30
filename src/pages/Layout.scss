@@ -159,6 +159,10 @@ img {
     }
 }
 
+button.btn-outline-secondary {
+    border: 2px solid $color-border;
+}
+
 // Inputs
 .input {
     border: 1px solid #dedede;
