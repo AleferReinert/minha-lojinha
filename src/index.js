@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import Cart from "./pages/Cart";
 import Favorites from './pages/Favorites';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ProductDetails from './pages/ProductDetails';
+import Faq from './pages/Faq';
 
 export default function App() {
     return (
@@ -19,6 +20,7 @@ export default function App() {
                     <Route path="/carrinho" element={<Cart />} />
                     <Route path="/lista-de-desejos" element={<Favorites />} />
                     <Route path="/detalhes-do-produto" element={<ProductDetails />} />
+                    <Route path="/perguntas-frequentes" element={<Faq />} />
                 </Route>
             </Routes>
         </BrowserRouter>
