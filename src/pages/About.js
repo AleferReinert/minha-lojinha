@@ -1,9 +1,9 @@
-import { PageTitle } from "../components/PageTitle";
+import { Title } from "../components/Title";
 
 const About = () => {
     return (
         <>
-            <PageTitle title='Sobre nós' />
+            <Title type='secondary' title='Sobre nós' />
             
             <div className="container">
                 <h2>História</h2>

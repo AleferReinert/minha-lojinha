@@ -13,7 +13,7 @@ const user = {
 const Layout = () => {
   return (
     <>
-      <Header isLoggedIn={true} username={user.firstName} />
+      <Header isLoggedIn={false} username={user.firstName} />
       <Outlet />
       <Footer />
       <BackToTheTopOfThePage />

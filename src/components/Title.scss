@@ -1,0 +1,40 @@
+@import '../Variables.scss';
+
+.title-primary {
+    text-align: center;
+    padding: 30px 0 26px;
+    display: flex;
+    justify-content: center;
+    
+    h1 {
+        border-bottom: 1px solid $color-primary;
+        font-size: $font-20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 2px;
+
+    }
+}
+
+.title-secondary {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    margin-bottom: 15px;
+
+    h1 {
+        font-size: $font-20px;
+        font-weight: 300;
+    }
+}
+
+.title-tertiary {
+    margin-bottom: 15px;
+    font-size: $font-28px;
+}
+
+@media all and (min-width: $breakpoint-medium) {
+    .title-secondary {
+        padding: 40px 0;
+        margin-bottom: 25px;
+    }
+}

@@ -52,7 +52,7 @@ export function MenuMobile(props){
         } else {
             return(
                 <ul>
-                    <li><Link to="/login">Entrar</Link></li>
+                    <li><Link to="/entrar">Entrar</Link></li>
                     <li><Link to="/">Cadastre-se</Link></li>
                 </ul>
             )
@@ -60,8 +60,8 @@ export function MenuMobile(props){
     };
     return (
         <>
-            <div id="menu-mobile" className={props.menuMobile}>
-                <button className="btn-close" onClick={closeMenu}></button>
+            <div id="menu-mobile" className={props.menuMobile} onClick={closeMenu}>
+                <button className="btn-close"></button>
                 <nav className="nav-user">
                     { navUser() }
                 </nav>

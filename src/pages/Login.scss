@@ -1,0 +1,20 @@
+@import '../Variables.scss';
+
+#container-login {
+    max-width: 360px;
+
+    .recover-password {
+        font-size: $font-12px;
+        color: $color-link;
+        padding: 8px 0;
+        display: block;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    [type='submit'] {
+        width: 100%;
+    }
+}

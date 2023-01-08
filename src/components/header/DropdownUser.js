@@ -47,7 +47,7 @@ export function DropdownUser(props){
                     </Link>
                 </li>
                 <li>
-                    <Link to="/login">
+                    <Link to="/entrar">
                         <FontAwesomeIcon icon={faSignInAlt} />
                         Entrar
                     </Link>

@@ -104,7 +104,9 @@ img {
 }
 
 .btn-close,
-.accordion-item:last-of-type {
+.accordion-item:last-of-type,
+.form-control,
+.btn {
     border-radius: 0;
 }
 
@@ -114,6 +116,16 @@ img {
 
 .accordion-button:not(.collapsed)::after {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='inherit'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.form-label {
+    margin: 10px 0 0;
+    font-weight: 500;
+    font-size: $font-14px;
+}
+
+.form-control {
+    font-size: $font-14px;
 }
 
 // Bolinhas do carousel
@@ -154,7 +166,11 @@ img {
     background: #f1625f;
 
     &:hover {
-        background: darken(#f1625f, 5%);
+        background: darken(#f1625f, 10%);
+    }
+
+    &:focus, &:active {
+        background: darken(#f1625f, 25%) !important;
     }
 }
 
@@ -232,20 +248,4 @@ select {
     border: 1px solid #dedede;
     height: 40px;
     padding: 0 10px;
-}
-
-.title-section {
-    text-align: center;
-    padding: 30px 0 26px;
-    display: flex;
-    justify-content: center;
-    
-    h1 {
-        border-bottom: 1px solid $color-primary;
-        font-size: $font-20px;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding-bottom: 2px;
-
-    }
 }

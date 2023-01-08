@@ -44,7 +44,7 @@
 
 #support-tabs {
 
-    > h2 {
+    > .title-tertiary {
         display: none;
     }
 
@@ -68,10 +68,8 @@
 
 @media all and (min-width: $breakpoint-medium) {
 
-    #support-tabs > h2 {
+    #support-tabs > .title-tertiary {
         display: block;
-        margin-bottom: 15px;
-        font-size: $font-30px;
     }
 
     .support-container {

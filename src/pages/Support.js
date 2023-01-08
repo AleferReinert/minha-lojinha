@@ -1,4 +1,4 @@
-import { PageTitle } from "../components/PageTitle";
+import { Title } from "../components/Title";
 import Tab from 'react-bootstrap/Tab';
 import Accordion from 'react-bootstrap/Accordion';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -49,7 +49,7 @@ const Support = () => {
 
     return (
         <>
-            <PageTitle title='Ajuda e suporte' />
+            <Title type='secondary' title='Ajuda e suporte' />
             <div className='container support-container'>
                 <Form.Select id='support-select' onChange={changeTab}>
                     <option value="buy">Como comprar</option>
@@ -68,7 +68,7 @@ const Support = () => {
                     <NavItem eventKey='faq' title='Dúvidas frequentes' icon={faQuestion} />
                 </nav>
                 <div id='support-tabs'>
-                    <h2>{title}</h2>
+                    <Title type='tertiary' title={title} />
                     <Accordion>
                         <Tab.Container activeKey={currentTab}>
                             <Tab.Content>

@@ -10,6 +10,7 @@ import Favorites from './pages/Favorites';
 import ProductDetails from './pages/ProductDetails';
 import Support from './pages/Support';
 import About from './pages/About';
+import Login from './pages/Login';
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
                     <Route path="/detalhes-do-produto" element={<ProductDetails />} />
                     <Route path="/ajuda/:tab" element={<Support /> } />
                     <Route path="/sobre-nos" element={<About /> } />
+                    <Route path="/entrar" element={<Login /> } />
                 </Route>
             </Routes>
         </BrowserRouter>

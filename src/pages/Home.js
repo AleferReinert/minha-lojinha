@@ -10,20 +10,20 @@ const Home = () => {
             <BannerCarouselMobile />
             <BannerCarouselDesktop />
             <section className='container'>
-                <div className="title-section">
+                <div className="title-primary">
                     <h1>Melhores ofertas</h1>
                 </div>
                 <ProductList />
             </section>
             <section className='container'>
-                <div className="title-section">
+                <div className="title-primary">
                     <h1>Mais vendidos</h1>
                 </div>
                 <ProductList />
             </section>
             <BrandsCarousel />
             <section className='container'>
-                <div className="title-section">
+                <div className="title-primary">
                     <h1>Lançamentos</h1>
                 </div>
                 <ProductList />
