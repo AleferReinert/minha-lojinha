@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400;500;700&display=swap');
 @import '../Variables.scss';
 // Reset
 body, p, ul, h1, h2, h3, h4, h5, h6, address {
@@ -7,6 +7,11 @@ body, p, ul, h1, h2, h3, h4, h5, h6, address {
 
 body {
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -79,14 +84,17 @@ img {
 }
 
 // Bootstrap reset
+.form-select:focus,
 .btn-close:focus,
 .accordion-button:focus,
 .accordion-header,
-.form-control:focus {
+.form-control:focus,
+.accordion-button:not(.collapsed) {
     box-shadow: none;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
     border-color: $color-black-default;
 }
 

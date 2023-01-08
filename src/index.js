@@ -8,7 +8,9 @@ import NoPage from "./pages/NoPage";
 import Cart from "./pages/Cart";
 import Favorites from './pages/Favorites';
 import ProductDetails from './pages/ProductDetails';
-import Faq from './pages/Faq';
+import Support from './pages/Support';
+import About from './pages/About';
+
 
 export default function App() {
     return (
@@ -20,7 +22,8 @@ export default function App() {
                     <Route path="/carrinho" element={<Cart />} />
                     <Route path="/lista-de-desejos" element={<Favorites />} />
                     <Route path="/detalhes-do-produto" element={<ProductDetails />} />
-                    <Route path="/perguntas-frequentes" element={<Faq />} />
+                    <Route path="/ajuda/:tab" element={<Support /> } />
+                    <Route path="/sobre-nos" element={<About /> } />
                 </Route>
             </Routes>
         </BrowserRouter>

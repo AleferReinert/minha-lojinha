@@ -1,0 +1,90 @@
+@import '../Variables.scss';
+
+#support-select {
+    border: 0;
+    padding: 0;
+    font-weight: 500;
+    border-bottom: 2px solid $color-primary;
+    margin: 0 0 15px;
+    font-size: $font-20px;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+#support-nav {
+    display: none;
+
+    button {
+        display: grid;
+        grid-template-columns: 20px auto;
+        border: 1px solid $color-border;
+        padding: 10px 30px 10px 10px;
+        text-align: left;
+        align-items: center;
+        column-gap: 5px;
+        transition: all $transition-duration linear;
+
+        + button {
+            border-top: 0;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: $color-black-default;
+            border-color: $color-black-default;
+        }
+
+        &.active {
+            color: #fff;
+            background-color: $color-primary;
+            border-color: $color-primary;
+        }
+    }
+}
+
+#support-tabs {
+
+    > h2 {
+        display: none;
+    }
+
+    .accordion-item {
+        border: 0;
+        border-bottom: 1px solid $color-border;
+    }
+
+    .accordion-body{
+        border: 0;
+        font-size: $font-14px;
+        padding: 0 0 15px;
+        text-align: justify;
+        text-indent: 10px;
+    }
+    
+    .accordion-button {
+        padding: 10px 0;
+    }
+}
+
+@media all and (min-width: $breakpoint-medium) {
+
+    #support-tabs > h2 {
+        display: block;
+        margin-bottom: 15px;
+        font-size: $font-30px;
+    }
+
+    .support-container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 30px;
+    }
+
+    #support-select {
+        display: none;
+    }
+
+    #support-nav {
+        display: grid;
+    }
+}

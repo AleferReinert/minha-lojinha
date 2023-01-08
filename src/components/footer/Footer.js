@@ -5,86 +5,89 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
     return (
-        <footer id="footer">
-            <div className="bar-top">
-                <nav className="container">
-                    <div className="site-map">
-                        <Accordion defaultActiveKey="-1">
-                            <Accordion.Item  eventKey="0">
+        <footer id='footer'>
+            <div className='bar-top'>
+                <nav className='container'>
+                    <div className='site-map'>
+                        <Accordion defaultActiveKey='-1'>
+                            <Accordion.Item  eventKey='0'>
                                 <Accordion.Header>
                                     Institucional
                                 </Accordion.Header>
                                 <Accordion.Body>
-                                    <ul className="list">
-                                        <li><Link to="/lojas">Lojas</Link></li>
-                                        <li><Link to="/sobre">Sobre nós</Link></li>
-                                        <li><Link to="/trabalhe-conosco">Trabalhe conosco</Link></li>
-                                        <li><a href="/" target='_blank'>Blog</a></li>
+                                    <ul className='list'>
+                                        <li><a href='/' target='_blank'>Blog</a></li>
+                                        <li><Link to='/lojas'>Lojas</Link></li>
+                                        <li><Link to='/politica-de-privacidade'>Política de privacidade</Link></li>
+                                        <li><Link to='/sobre-nos'>Sobre nós</Link></li>
+                                        <li><Link to='/trabalhe-conosco'>Trabalhe conosco</Link></li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item  eventKey="1">
+                            <Accordion.Item  eventKey='1'>
                                 <Accordion.Header>
                                     Ajuda e suporte
                                 </Accordion.Header>
                                 <Accordion.Body>
-                                    <ul className="list">
-                                        <li><Link to="/prazos-de-entrega">Prazos de entrega</Link></li>
-                                        <li><Link to="/trocas-e-devolucoes">Trocas e devoluções</Link></li>
-                                        <li><Link to="/perguntas-frequentes">Perguntas frequentes</Link></li>
-                                        <li><Link to="/politica-de-privacidade">Política de privacidade</Link></li>
+                                    <ul className='list'>
+                                        <li><Link to='/ajuda/buy' tab='buy'>Como comprar</Link></li>
+                                        <li><Link to='/ajuda/payments' tab='payments'>Pagamentos</Link></li>
+                                        <li><Link to='/ajuda/cancel' tab='cancel'>Cancelamentos</Link></li>
+                                        <li><Link to='/ajuda/deliveries' tab='deliveries'>Entregas e frete</Link></li>
+                                        <li><Link to='/ajuda/exchanges' tab='exchanges'>Trocas e devoluções</Link></li>
+                                        <li><Link to='/ajuda/faq' tab='faq'>Dúvidas frequentes</Link></li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item  eventKey="2">
+                            <Accordion.Item  eventKey='2'>
                                 <Accordion.Header>
                                     Contato
                                 </Accordion.Header>
                                 <Accordion.Body>
-                                    <ul className="list">
-                                        <li><a href="./">Tel.: (47) 55555-5555</a></li>
-                                        <li><a href="./">Tel.2: (47) 55555-5555</a></li>
-                                        <li><a href="./">E-mail: atendimento@loja.com.br</a></li>
+                                    <ul className='list'>
+                                        <li><a href='./'>Tel.: (47) 55555-5555</a></li>
+                                        <li><a href='./'>Tel.2: (47) 55555-5555</a></li>
+                                        <li><a href='./'>E-mail: atendimento@loja.com.br</a></li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <div className="column-social">
+                        <div className='column-social'>
                             <h2>Social</h2>
                             <Social />
                         </div>
                     </div>
                 </nav>
             </div>
-            <div className="bar-social">
+            <div className='bar-social'>
                 <Social />
             </div> 
-            <div className="bar-middle">
-                <div className="container">
-                    <ul className="payments">
-                        <li><span className="icon icon-boleto" title="Boleto"></span></li>
-                        <li><span className="icon icon-mastercard" title="Mastercard"></span></li>
-                        <li><span className="icon icon-visa" title="Visa"></span></li>
-                        <li><span className="icon icon-diners" title="Diners"></span></li>
-                        <li><span className="icon icon-amex" title="Amex"></span></li>
-                        <li><span className="icon icon-elo" title="Elo"></span></li>
-                        <li><span className="icon icon-hipercard" title="Hipercard"></span></li>
-                        <li><span className="icon icon-pix" title="Pix"></span></li>
+            <div className='bar-middle'>
+                <div className='container'>
+                    <ul className='payments'>
+                        <li><span className='icon icon-boleto' title='Boleto'></span></li>
+                        <li><span className='icon icon-mastercard' title='Mastercard'></span></li>
+                        <li><span className='icon icon-visa' title='Visa'></span></li>
+                        <li><span className='icon icon-diners' title='Diners'></span></li>
+                        <li><span className='icon icon-amex' title='Amex'></span></li>
+                        <li><span className='icon icon-elo' title='Elo'></span></li>
+                        <li><span className='icon icon-hipercard' title='Hipercard'></span></li>
+                        <li><span className='icon icon-pix' title='Pix'></span></li>
                     </ul>
-                    <ul className="security">
-                        <li><span className="icon icon-ssl-security"></span></li>
-                        <li><span className="icon icon-google-security"></span></li>
+                    <ul className='security'>
+                        <li><span className='icon icon-ssl-security'></span></li>
+                        <li><span className='icon icon-google-security'></span></li>
                     </ul>
-                    <p className="developed">
+                    <p className='developed'>
                         Developed by
                         <br />
                         Alefer Reinert
                     </p>
                 </div>
             </div>
-            <div className="bar-bottom">
-                <div className="address">
-                    <div className="container">
+            <div className='bar-bottom'>
+                <div className='address'>
+                    <div className='container'>
                         <p>E-Commerce Comércio LTDA - CNPJ 00.000.000/0000-00</p>
                         <address>Rua Ricardo Fischer Stein, 438 - Bairro Nações - Indaial - SC - CEP 89086-172</address>
                     </div>
