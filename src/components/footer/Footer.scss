@@ -113,13 +113,9 @@ $space-vertical: 20px;
             a {
                 font-size: inherit;
                 line-height: $font-24px;
+                color: inherit;
             }
         }
-
-        // .column {
-        //     padding: 13px 0;
-        //     border-bottom: 1px solid $color-border;
-        // }
     }
     
     .bar-social {

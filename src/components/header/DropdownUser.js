@@ -41,7 +41,7 @@ export function DropdownUser(props){
         return(
             <ul>
                 <li>
-                    <Link to="/">
+                    <Link to="/cadastro">
                         <FontAwesomeIcon icon={faUserPlus} />
                         Cadastre-se
                     </Link>

@@ -2,6 +2,7 @@ import { Title } from '../components/Title';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './Login.scss';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -17,10 +18,14 @@ const Login = () => {
                     <Form.Group>
                         <Form.Label>Senha:</Form.Label>
                         <Form.Control type='password' placeholder='Mínimo de 8 caracteres' required />
-                        <a href='./' className='recover-password'>Esqueci minha senha</a>
+                        <a href='./' className='recover-password link'>Esqueci minha senha</a>
                     </Form.Group>
                     <Button type='submit' variant='primary'>Entrar</Button>{' '}
                 </Form>
+                <div className="registration-link">
+                    <p>Não tem conta?</p>
+                    <Link to='/cadastro' className='link'>Cadastre-se!</Link>
+                </div>
             </div>
         </>
     )

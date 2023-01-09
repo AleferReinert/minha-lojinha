@@ -11,6 +11,7 @@ import ProductDetails from './pages/ProductDetails';
 import Support from './pages/Support';
 import About from './pages/About';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
                     <Route path="/ajuda/:tab" element={<Support /> } />
                     <Route path="/sobre-nos" element={<About /> } />
                     <Route path="/entrar" element={<Login /> } />
+                    <Route path="/cadastro" element={<Register /> } />
                 </Route>
             </Routes>
         </BrowserRouter>
