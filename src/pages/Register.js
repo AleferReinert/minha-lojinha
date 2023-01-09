@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import './Register.scss';
 import { useState } from 'react';
+import { IMaskInput } from 'react-imask';
 
 const Registration = () => {
     // Controla a escolha entre pessoa física e jurídica no topo
@@ -34,7 +35,7 @@ const Registration = () => {
             return (
                 <Form.Group>
                     <Form.Label className='required'>{props.title}</Form.Label>
-                    <Form.Control type={props.type} placeholder={props.placeholder} required />
+                    <Form.Control as={IMaskInput} type={props.type} placeholder={props.placeholder} mask={props.mask} required />
                 </Form.Group>
             )
         }
@@ -54,16 +55,16 @@ const Registration = () => {
                     <Field typePerson='legal-person' title='Nome fantasia' type='text' />
                     <div className="two-columns-desktop">
                         <Field typePerson='legal-person' title='Inscrição estadual' type='text' />
-                        <Field typePerson='legal-person' title='CNPJ' type='text' placeholder='00.000.000/0000-00' />
+                        <Field typePerson='legal-person' title='CNPJ' type='text' placeholder='00.000.000/0000-00' mask='00.000.000/0000-00' />
                     </div>
                     <Field typePerson='natural-person' title='Nome' type='text' />
                     <Field typePerson='natural-person' title='Sobrenome' type='text' />
                     <div className="two-columns-desktop">
-                        <Field typePerson='natural-person' title='CPF' type='text' placeholder='000.000.000-00' />
+                        <Field typePerson='natural-person' title='CPF' type='text' placeholder='000.000.000-00' mask='000.000.000-00' />
                         <Field typePerson='natural-person' title='Data de nascimento' type='date' />
                     </div>
                     <div className="two-columns-desktop">
-                        <Field title='Telefone' type='tel' placeholder='(00) 00000-0000' />
+                        <Field title='Telefone' type='tel' placeholder='(00) 00000-0000' mask='(00) 00000-0000' />
                         <Field typePerson='natural-person' title='Sexo' type='select-genre' />
                     </div>
                     <Field title='E-mail' type='email' placeholder='nome@exemplo.com' />

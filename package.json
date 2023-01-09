@@ -52,6 +52,7 @@
         "@fortawesome/free-brands-svg-icons": "^6.2.1",
         "@fortawesome/free-solid-svg-icons": "^6.2.1",
         "gh-pages": "^4.0.0",
+        "react-imask": "^6.4.3",
         "react-router-dom": "^6.6.1"
     }
 }
