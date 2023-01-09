@@ -217,9 +217,12 @@ button.btn-outline-secondary {
 [type='text'],
 [type='email'],
 [type='number'],
-[type='date'] {
+[type='date'],
+[type='search'] {
     border-color: $color-border;
     color: inherit;
+    font-size: $font-14px;
+    padding: 6px 12px;
 }
 
 .form-check-input[type="checkbox"],

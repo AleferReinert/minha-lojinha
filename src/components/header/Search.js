@@ -6,7 +6,7 @@ export function Search(props){
     return(
         <div className={ 'search ' + props.searchMobile } id="header-search">
             <form action="">
-                <input type="text" placeholder="Digite sua busca..." className="input" />
+                <input type="search" placeholder="Digite sua busca..." />
                 <button type="submit" className="btn btn-submit">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>

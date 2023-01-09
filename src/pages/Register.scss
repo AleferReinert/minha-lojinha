@@ -3,14 +3,6 @@
 #container-register {
     max-width: 500px;
 
-    &.legal-person .field-natural-person {
-        display: none;
-    }
-
-    &.natural-person .field-legal-person {
-        display: none;
-    }
-
     .choose-type {
         display: flex;
         column-gap: 15px;
