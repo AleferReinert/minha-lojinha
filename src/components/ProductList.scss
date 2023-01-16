@@ -7,39 +7,42 @@
     grid-row-gap: $column-gap;
     font-size: $font-16px;
 
-    &:hover li {
-        opacity: 0.7;
+    a {
+        color: $color-black-default;
     }
 
     li {
         position: relative;
-        transition: opacity $transition-duration linear;
+        transition: background $transition-duration linear;
+        padding-bottom: 15px;
 
         &:hover {
-            opacity: 1;
+            background-color: #eceef0;
         }
     }
 
     img {
-        aspect-ratio: 3/4;
-        margin-bottom: 5px;
-        background-color: #ccc;
+        aspect-ratio: 1/1;
     }
 
     .title {
         font-size: $font-14px;
         font-weight: 400;
+        padding: 10px 10px 5px;
+        letter-spacing: .5px;
     }
     
     .price {
-        margin-right: 5px;
+        margin-right: 3px;
         color: $color-success;
         font-weight: 500;
+        padding: 0 10px;
     }
     
     .old-price {
         text-decoration: line-through;
         color: #999;
+        font-size: $font-14px;
     }
     
     .discount {

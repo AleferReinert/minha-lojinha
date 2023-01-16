@@ -4,6 +4,7 @@ import './BrandsCarousel.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { Title } from './Title';
 
 const Brand = props => {
     return (
@@ -58,9 +59,7 @@ export function BrandsCarousel() {
     return (
         <div id='brands-carousel'>
             <div className='container'>
-            <div className="title-section">
-                    <h1>Marcas</h1>
-                </div>
+                <Title type='primary' title='Marcas' />
                 <Slider {...settings}>
                     <Brand src='adidas.png' title='Adidas' />
                     <Brand src='calvin-klein.png' title='Calvin Klein' />

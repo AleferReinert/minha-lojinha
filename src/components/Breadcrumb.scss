@@ -1,0 +1,22 @@
+@import '../Variables.scss';
+
+#breadcrumb {
+    display: flex;
+    padding: 10px 0;
+
+    a {
+        font-size: $font-14px;
+        color: $color-black-default;
+        transition: all $transition-duration linear;
+        
+        + a::before {
+            content: '/';
+            color: $color-black-default;
+            padding: 0 5px;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}

@@ -3,29 +3,24 @@ import { BannerCarouselDesktop } from '../components/BannerCarouselDesktop';
 import { ProductList } from '../components/ProductList';
 import { BrandsCarousel } from '../components/BrandsCarousel';
 import { Newsletter } from '../components/Newsletter';
+import { Title } from '../components/Title';
 
 const Home = () => {
-    return(
+    return (
         <>
             <BannerCarouselMobile />
             <BannerCarouselDesktop />
             <section className='container'>
-                <div className="title-primary">
-                    <h1>Melhores ofertas</h1>
-                </div>
+                <Title type='primary' title='Melhores ofertas' />
                 <ProductList />
             </section>
             <section className='container'>
-                <div className="title-primary">
-                    <h1>Mais vendidos</h1>
-                </div>
+                <Title type='primary' title='Mais vendidos' />
                 <ProductList />
             </section>
             <BrandsCarousel />
             <section className='container'>
-                <div className="title-primary">
-                    <h1>Lançamentos</h1>
-                </div>
+                <Title type='primary' title='Lançamentos' />
                 <ProductList />
             </section>
             <Newsletter />

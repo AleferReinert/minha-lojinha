@@ -7,12 +7,12 @@ export function ProductList() {
         list.push(
             <li key={i}>
                 <Link to="/detalhes-do-produto">
-                    <img src={process.env.PUBLIC_URL + '/product.jpg'} alt="Lorem ipsum dolor" />
-                    <h2 className='title'>Lorem ipsum dolor</h2>
+                    <img src={process.env.PUBLIC_URL + '/products/1.webp'} alt="Camiseta Adicolor Classics Trefoil" />
+                    <h2 className='title'>Camiseta Adicolor Classics Trefoil</h2>
                     <p>
-                        <span className='price'>R$ 59,90</span>
-                        <span className='old-price'>R$ 89,90</span>
-                        <span className="discount">-33%</span>
+                        <span className='price'>R$ 129,99</span>
+                        <span className='old-price'>R$ 149,99</span>
+                        <span className="discount">-10%</span>
                     </p>
                 </Link>
             </li>

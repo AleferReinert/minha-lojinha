@@ -23,7 +23,7 @@ export default function App() {
                     <Route path="*" element={<NoPage />} />
                     <Route path="/carrinho" element={<Cart />} />
                     <Route path="/lista-de-desejos" element={<Favorites />} />
-                    <Route path="/detalhes-do-produto" element={<ProductDetails />} />
+                    <Route path="/detalhes-do-produto" element={<ProductDetails id='page-product-details' />} />
                     <Route path="/ajuda/:tab" element={<Support /> } />
                     <Route path="/sobre-nos" element={<About /> } />
                     <Route path="/entrar" element={<Login /> } />
