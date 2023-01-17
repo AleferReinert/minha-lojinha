@@ -14,10 +14,12 @@ function ProductDetails(props) {
         <>
             <Breadcrumb />
             <div className='container grid'>
+                <ProductTitle device='mobile' />
+                <Rating device='mobile' />
                 <ImagesCarousel />
                 <div className='product-info'>
-                    <h1 id='product-title'>Camiseta Adicolor Classics Trefoil</h1>
-                    <Rating rating={4.5} />
+                    <ProductTitle device='desktop' />
+                    <Rating device='desktop' />
                     <p id='price-row'>
                         <span className='price'>R$ 129,99</span>
                         <span className='old-price'>R$ 149,99</span>
@@ -59,29 +61,29 @@ function ProductDetails(props) {
                     <div id='colors'>
                         <h2>Cores</h2>
                         <ul>
-                            <li style={{ backgroundColor: '#ff0000'}}>
+                            <li style={{ backgroundColor: '#ff0000' }}>
                                 <label>
-                                    <input type='radio' name='size' id='#ff0000' required />
+                                    <input type='radio' name='color' id='#ff0000' required />
                                 </label>
                             </li>
-                            <li style={{ backgroundColor: '#00ff00'}}>
+                            <li style={{ backgroundColor: '#00ff00' }}>
                                 <label>
-                                    <input type='radio' name='size' id='#00ff00' required />
+                                    <input type='radio' name='color' id='#00ff00' required />
                                 </label>
                             </li>
-                            <li style={{ backgroundColor: '#0000ff'}}>
+                            <li style={{ backgroundColor: '#0000ff' }}>
                                 <label>
-                                    <input type='radio' name='size' id='#0000ff' required />
+                                    <input type='radio' name='color' id='#0000ff' required />
                                 </label>
                             </li>
-                            <li style={{ backgroundColor: '#000'}}>
+                            <li style={{ backgroundColor: '#000' }}>
                                 <label>
-                                    <input type='radio' name='size' id='#000' required />
+                                    <input type='radio' name='color' id='#000' required />
                                 </label>
                             </li>
-                            <li style={{ backgroundColor: '#fff'}}>
+                            <li style={{ backgroundColor: '#fff' }}>
                                 <label>
-                                    <input type='radio' name='size' id='#fff' required />
+                                    <input type='radio' name='color' id='#fff' required />
                                 </label>
                             </li>
                         </ul>
@@ -120,33 +122,54 @@ function ProductDetails(props) {
     )
 }
 
+const ProductTitle = props => {
+    return (
+        <h1 id='product-title' className={props.device}>
+            Camiseta Adicolor Classics Trefoil
+        </h1>
+    )
+};
+
 function ImagesCarousel() {
+    const data = ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp'];
+    const images = [];
+    const thumbs = [];
+
+    // Pega o index da thumb que foi clicada e simula um click nas bolinhas (escondidas via css) do carousel
+    function changeImage(e) {
+        const index = e.target.dataset.index;
+        const button = document.querySelectorAll('#images-carousel .carousel-indicators button');
+        button[index].click();
+    }
+    for (let i = 0; i < data.length; i++) {
+        images.push(
+            <Carousel.Item key={i}>
+                <img src={process.env.PUBLIC_URL + '/products/' + data[i]} alt='' />
+            </Carousel.Item>
+        )
+        thumbs.push(
+            <button type='button' onClick={changeImage} key={i}>
+                <img src={process.env.PUBLIC_URL + '/products/' + data[i]} alt='' data-index={i} />
+            </button>
+        )
+    }
+
     return (
         <div id='images-carousel'>
-            <Carousel controls={false} fade={true} interval={null} indicatorLabels={[1, 2, 3, 4, 5]}>
-                <Carousel.Item>
-                    <img src={process.env.PUBLIC_URL + '/products/1.webp'} alt='' />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img src={process.env.PUBLIC_URL + '/products/2.webp'} alt='' />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img src={process.env.PUBLIC_URL + '/products/3.webp'} alt='' />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img src={process.env.PUBLIC_URL + '/products/4.webp'} alt='' />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img src={process.env.PUBLIC_URL + '/products/5.webp'} alt='' />
-                </Carousel.Item>
+            <Carousel controls={false} fade={true} interval={null}>
+                {images}
             </Carousel>
+            <div id="thumbs">
+                {thumbs}
+            </div>
         </div>
     )
 }
 
 function Rating(props) {
+    const rating = 4.4;
     return (
-        <div id='rating-row' title={props.rating}>
+        <div id='rating-row' title={rating} className={props.device}>
             <div className='empty'>
                 <FontAwesomeIcon icon={faStarO} />
                 <FontAwesomeIcon icon={faStarO} />
@@ -154,7 +177,7 @@ function Rating(props) {
                 <FontAwesomeIcon icon={faStarO} />
                 <FontAwesomeIcon icon={faStarO} />
             </div>
-            <div className='full' style={{ maxWidth: (props.rating * 20) + '%' }}>
+            <div className='full' style={{ maxWidth: (rating * 20) + '%' }}>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
