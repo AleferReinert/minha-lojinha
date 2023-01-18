@@ -6,6 +6,7 @@ import { faStar as faStarO } from '@fortawesome/free-regular-svg-icons';
 import { ProductList } from '../components/ProductList';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { Title } from '../components/Title';
+import { useState } from 'react';
 
 function ProductDetails(props) {
     document.body.id = props.id;
@@ -131,36 +132,49 @@ const ProductTitle = props => {
 };
 
 function ImagesCarousel() {
-    const data = ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp'];
-    const images = [];
-    const thumbs = [];
-
-    // Pega o index da thumb que foi clicada e simula um click nas bolinhas (escondidas via css) do carousel
-    function changeImage(e) {
-        const index = e.target.dataset.index;
-        const button = document.querySelectorAll('#images-carousel .carousel-indicators button');
-        button[index].click();
-    }
-    for (let i = 0; i < data.length; i++) {
-        images.push(
-            <Carousel.Item key={i}>
-                <img src={process.env.PUBLIC_URL + '/products/' + data[i]} alt='' />
-            </Carousel.Item>
-        )
-        thumbs.push(
-            <button type='button' onClick={changeImage} key={i}>
-                <img src={process.env.PUBLIC_URL + '/products/' + data[i]} alt='' data-index={i} />
-            </button>
-        )
-    }
+    const data = [
+        {
+            image: '1.webp',
+            title: 'Frente'
+        },
+        {
+            image: '2.webp',
+            title: 'Camisa vestida'
+        },
+        {
+            image: '3.webp',
+            title: 'Camisa vestida'
+        },
+        {
+            image: '4.webp',
+            title: 'Camisa vestida lado'
+        },
+        {
+            image: '5.webp',
+            title: 'Costas'
+        }
+    ];
+    const [index, setIndex] = useState(0);
 
     return (
         <div id='images-carousel'>
-            <Carousel controls={false} fade={true} interval={null}>
-                {images}
+            <Carousel controls={false} fade={true} interval={null} activeIndex={index}>
+                {data.map((slide, i) => {
+                    return (
+                        <Carousel.Item key={i}>
+                            <img src={process.env.PUBLIC_URL + '/products/' + slide.image} alt={slide.title} />
+                        </Carousel.Item>
+                    )
+                })}
             </Carousel>
             <div id="thumbs">
-                {thumbs}
+                {data.map((slide, i) => {
+                    return (
+                        <button type='button' onClick={() => { setIndex(i) }} key={i}>
+                            <img src={process.env.PUBLIC_URL + '/products/' + slide.image} alt={slide.title} />
+                        </button>
+                    )
+                })}
             </div>
         </div>
     )
