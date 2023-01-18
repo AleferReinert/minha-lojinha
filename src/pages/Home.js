@@ -1,5 +1,4 @@
-import { BannerCarouselMobile } from '../components/BannerCarouselMobile';
-import { BannerCarouselDesktop } from '../components/BannerCarouselDesktop';
+import { BannerCarousel } from '../components/BannerCarousel';
 import { ProductList } from '../components/ProductList';
 import { BrandsCarousel } from '../components/BrandsCarousel';
 import { Newsletter } from '../components/Newsletter';
@@ -8,8 +7,8 @@ import { Title } from '../components/Title';
 const Home = () => {
     return (
         <>
-            <BannerCarouselMobile />
-            <BannerCarouselDesktop />
+            <BannerCarousel device='mobile' controls={false} />
+            <BannerCarousel device='desktop' />
             <section className='container'>
                 <Title type='primary' title='Melhores ofertas' />
                 <ProductList />

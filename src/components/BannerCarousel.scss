@@ -1,6 +1,14 @@
 @import '../Variables.scss';
 
+.banner-carousel-desktop {
+    display: none;
+}
+
 @media all and (min-width: $breakpoint-medium) {
+    .banner-carousel-desktop {
+        display: block;
+    }
+
     .banner-carousel-mobile {
         display: none;
     }
