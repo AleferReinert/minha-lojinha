@@ -1,18 +1,22 @@
 import './TextCarousel.scss';
 import Carousel from 'react-bootstrap/Carousel';
 
-export function TextCarousel(){
-    return(
+export function TextCarousel() {
+    const data = [
+        'Frete grátis para sul e sudeste',
+        'Produtos com até 70% de desconto',
+        'Parcele em até 10x sem juros no cartão'
+    ]
+
+    return (
         <Carousel className="carousel-header" indicators={false} controls={false}>
-            <Carousel.Item>
-                <div>Frete grátis para sul e sudeste</div>
-            </Carousel.Item>
-            <Carousel.Item>
-                <div>Produtos com até 70% de desconto</div>
-            </Carousel.Item>
-            <Carousel.Item>
-                <div>Parcele em até 10x sem juros no cartão</div>
-            </Carousel.Item>
+            {data.map((slide, i) => {
+                return (
+                    <Carousel.Item key={i}>
+                        <div>{slide}</div>
+                    </Carousel.Item>
+                )
+            })}
         </Carousel>
     )
 }
