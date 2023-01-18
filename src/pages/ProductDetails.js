@@ -135,23 +135,23 @@ function ImagesCarousel() {
     const data = [
         {
             image: '1.webp',
-            title: 'Frente'
+            description: 'Frente'
         },
         {
             image: '2.webp',
-            title: 'Camisa vestida'
+            description: 'Camisa vestida'
         },
         {
             image: '3.webp',
-            title: 'Camisa vestida'
+            description: 'Camisa vestida'
         },
         {
             image: '4.webp',
-            title: 'Camisa vestida lado'
+            description: 'Camisa vestida lado'
         },
         {
             image: '5.webp',
-            title: 'Costas'
+            description: 'Costas'
         }
     ];
     const [index, setIndex] = useState(0);
@@ -162,7 +162,7 @@ function ImagesCarousel() {
                 {data.map((slide, i) => {
                     return (
                         <Carousel.Item key={i}>
-                            <img src={process.env.PUBLIC_URL + '/products/' + slide.image} alt={slide.title} />
+                            <img src={process.env.PUBLIC_URL + '/products/' + slide.image} alt={slide.description} />
                         </Carousel.Item>
                     )
                 })}
@@ -171,7 +171,7 @@ function ImagesCarousel() {
                 {data.map((slide, i) => {
                     return (
                         <button type='button' onClick={() => { setIndex(i) }} key={i}>
-                            <img src={process.env.PUBLIC_URL + '/products/' + slide.image} alt={slide.title} />
+                            <img src={process.env.PUBLIC_URL + '/products/' + slide.image} alt={slide.description} />
                         </button>
                     )
                 })}
