@@ -10,10 +10,10 @@ export function TextCarousel() {
 
     return (
         <Carousel className="carousel-header" indicators={false} controls={false}>
-            {data.map((slide, i) => {
+            {data.map((text, i) => {
                 return (
                     <Carousel.Item key={i}>
-                        <div>{slide}</div>
+                        <div>{text}</div>
                     </Carousel.Item>
                 )
             })}

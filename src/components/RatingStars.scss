@@ -1,0 +1,15 @@
+.rating-stars {
+    color: #FFC240;
+    position: relative;
+    line-height: 0;
+    display: inline-block;
+
+    .full {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 0;
+        display: flex;
+        overflow: hidden;
+    }
+}

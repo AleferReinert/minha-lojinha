@@ -1,0 +1,60 @@
+@import '../../Variables.scss';
+
+#sizes {
+    margin: 15px 0;
+
+    h2 {
+        font-size: $font-16px;
+        margin-bottom: 4px;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li {
+        line-height: 0;
+    }
+
+    label {
+        margin: 0;
+    }
+
+    input {
+        width: auto;
+        height: auto;
+        text-transform: uppercase;
+
+        &:hover::after {
+            background-color: #f9f9f9;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            border: 1px solid $color-border;
+            border-radius: 0;
+            content: attr(id);
+            width: 60px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:checked::after {
+            border-color: $color-black-default;
+            background-color: $color-black-default;
+            color: #fff;
+        }
+    }
+}
+
+@media all and (min-width: $breakpoint-large) {
+    #sizes {
+        margin: 25px 0;
+    }
+}

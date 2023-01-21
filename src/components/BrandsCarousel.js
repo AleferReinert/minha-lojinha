@@ -16,66 +16,22 @@ function Arrow(props) {
 }
 
 export function BrandsCarousel() {
-    const data = [
-        {
-            image: 'adidas.png',
-            name: 'Adidas'
-        },
-        {
-            image: 'calvin-klein.png',
-            name: 'Calvin Klein'
-        },
-        {
-            image: 'cavalera.png',
-            name: 'Cavalera'
-        },
-        {
-            image: 'colcci.png',
-            name: 'Colcci'
-        },
-        {
-            image: 'converse.png',
-            name: 'Converse'
-        },
-        {
-            image: 'everlast.png',
-            name: 'Everlast'
-        },
-        {
-            image: 'fila.png',
-            name: 'Fila'
-        },
-        {
-            image: 'lacoste.png',
-            name: 'Lacoste'
-        },
-        {
-            image: 'mizuno.png',
-            name: 'Mizuno'
-        },
-        {
-            image: 'mormaii.png',
-            name: 'Mormaii'
-        }, {
-            image: 'nike.png',
-            name: 'Nike'
-        },
-        {
-            image: 'oakley.png',
-            name: 'Oakley'
-        },
-        {
-            image: 'puma.png',
-            name: 'Puma'
-        },
-        {
-            image: 'ray-ban.png',
-            name: 'Ray Ban'
-        },
-        {
-            image: 'vans.png',
-            name: 'Vans'
-        },
+    const brands = [
+        { image: 'adidas.png', name: 'Adidas' },
+        { image: 'calvin-klein.png', name: 'Calvin Klein' },
+        { image: 'cavalera.png', name: 'Cavalera' },
+        { image: 'colcci.png', name: 'Colcci' },
+        { image: 'converse.png', name: 'Converse' },
+        { image: 'everlast.png', name: 'Everlast' },
+        { image: 'fila.png', name: 'Fila' },
+        { image: 'lacoste.png', name: 'Lacoste' },
+        { image: 'mizuno.png', name: 'Mizuno' },
+        { image: 'mormaii.png', name: 'Mormaii' }, 
+        { image: 'nike.png', name: 'Nike' },
+        { image: 'oakley.png', name: 'Oakley' },
+        { image: 'puma.png', name: 'Puma' },
+        { image: 'ray-ban.png', name: 'Ray Ban' },
+        { image: 'vans.png', name: 'Vans' }
     ];
     var settings = {
         autoplay: true,
@@ -114,11 +70,11 @@ export function BrandsCarousel() {
             <div className='container'>
                 <Title type='primary' title='Marcas' />
                 <Slider {...settings}>
-                    {data.map((slide, i) => {
+                    {brands.map((brand, i) => {
                         return (
                             <div>
-                                <Link to='./' title={slide.name} key={i}>
-                                    <img src={process.env.PUBLIC_URL + '/brands/' + slide.image} alt={slide.name} />
+                                <Link to='./' title={brand.name} key={i}>
+                                    <img src={process.env.PUBLIC_URL + '/brands/' + brand.image} alt={brand.name} />
                                 </Link>
                             </div>
                         )

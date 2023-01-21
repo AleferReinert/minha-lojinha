@@ -1,0 +1,46 @@
+@import '../../Variables.scss';
+
+#images-carousel {
+    display: flex;
+    flex-direction: column;
+
+    .carousel-item {
+        text-align: center;
+    }
+
+    .carousel-indicators {
+        z-index: -100;
+        opacity: 0;
+    }
+
+    #thumbs {
+        display: flex;
+        margin: 5px -1px -2px;
+        flex-wrap: wrap;
+
+        button {
+            width: 20%;
+            padding: 0 1px 2px;
+        }
+    }
+}
+
+@media all and (min-width: $breakpoint-large) {
+    #images-carousel {
+        flex-direction: row-reverse;
+
+        #thumbs {
+            flex-direction: column;
+            margin: 0 5px 0 0;
+
+            button {
+                width: 92px;
+                padding: 0;
+
+                +button {
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}

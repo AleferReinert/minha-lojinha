@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import Cart from "./pages/Cart";
 import Favorites from './pages/Favorites';
-import ProductDetails from './pages/ProductDetails';
+import ProductDetails from './pages/productDetails/ProductDetails';
 import Support from './pages/Support';
 import About from './pages/About';
 import Login from './pages/Login';

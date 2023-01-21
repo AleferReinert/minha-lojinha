@@ -1,0 +1,111 @@
+@import '../../Variables.scss';
+
+#rating {
+    margin-top: 25px;
+
+    .title-quaternary {
+        border-top: 1px solid $color-border;
+        padding: 40px 0 15px;
+    }
+
+    .column-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        white-space: nowrap;
+        
+        .rating-stars {
+            font-size: $font-14px;
+        }
+    
+        .average {
+            font-weight: 500;
+            margin-left: 5px;
+
+            span {
+                font-size: $font-24px;
+            }
+        }
+    }
+
+    .column-right {
+        max-height: 450px;
+        overflow-x: auto;
+        border-bottom: 1px solid $color-border;
+        
+        li {
+            display: flex;
+            padding: 15px 15px 15px 0;
+            flex-direction: column-reverse;
+
+            + li {
+                border-top: 1px solid $color-border;
+            }
+            
+            > div:first-child {
+                display: inline-flex;
+                font-size: $font-14px;
+                color: lighten($color-black-default, 40%);
+                margin-top: 5px;
+            }
+        }
+
+        .title {
+            font-size: $font-14px;
+        }
+
+        .rating-stars {
+            font-size: $font-12px;
+        }
+        .comment {
+            font-size: $font-14px;
+        }
+    }
+}
+
+@media all and (min-width: $breakpoint-large) {
+
+    #rating {
+
+        .columns {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .column-left {
+            padding: 0 30px;
+        }
+
+        .column-right {
+
+            li {
+                padding: 25px 25px 25px 0;
+            }
+        }
+    }
+}
+
+@media all and (min-width: $breakpoint-extralarge) {
+
+    #rating {
+
+        .column-right {
+
+            li {
+                flex-direction: row;
+
+                > div:first-child {
+                    display: block;
+                    text-align: center;
+                    padding: 0 30px;
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

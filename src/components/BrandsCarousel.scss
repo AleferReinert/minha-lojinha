@@ -12,6 +12,12 @@
         margin-top: -15px;
         line-height: 0;
         font-size: 30px;
+        opacity: 0.25;
+        transition: all $transition-duration linear;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     .slick-prev {

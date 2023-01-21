@@ -32,9 +32,18 @@
     font-size: $font-28px;
 }
 
+.title-quaternary {
+    font-size: $font-20px;
+    padding: 20px 0;
+}
+
 @media all and (min-width: $breakpoint-medium) {
     .title-secondary {
         padding: 40px 0;
         margin-bottom: 25px;
+    }
+
+    .title-quaternary {
+        font-size: $font-18px;
     }
 }

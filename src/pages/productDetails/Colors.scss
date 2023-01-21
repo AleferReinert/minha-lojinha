@@ -1,0 +1,54 @@
+@import '../../Variables.scss';
+
+#colors {
+    margin: 15px 0;
+
+    h2 {
+        font-size: $font-16px;
+        margin-bottom: 4px;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li {
+        line-height: 0;
+        margin: 0 8px 5px 0;
+        border-radius: 100%;
+    }
+
+    label {
+        margin: 0;
+    }
+
+    input {
+        width: auto;
+        height: auto;
+        text-transform: uppercase;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            width: 34px;
+            height: 34px;
+            border: 3px solid #fff;
+            box-shadow: 0 0 1px 1px $color-black-default;
+            background-color: transparent;
+        }
+
+        &:checked::after {
+            box-shadow: 0 0 1px 1px $color-primary;
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media all and (min-width: $breakpoint-large) {
+    #colors {
+        margin: 25px 0;
+    }
+}

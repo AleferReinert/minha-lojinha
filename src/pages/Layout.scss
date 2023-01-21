@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400;500;700&display=swap');
 @import '../Variables.scss';
+
 // Reset
 body, p, ul, h1, h2, h3, h4, h5, h6, address {
     margin: 0;
@@ -175,37 +176,37 @@ label,
 .btn {
     text-transform: uppercase;
     padding: 0 15px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-family: $font-primary, sans-serif;
+    font-size: $font-12px;
     height: 40px;
     box-sizing: border-box;
-    transition: all 0.15s linear;
+    transition: all $transition-duration linear;
 }
 
 .btn-default {
-    color: rgba(0,0,0,0.85);
-    border: 1px solid #dedede;
+    color: $color-black-default;
+    border: 1px solid $color-border;
 }
 
 .btn-primary {
     color: #fff;
-    background: #f1625f;
+    background: $color-primary;
 
     &:hover {
-        background: darken(#f1625f, 10%);
+        background: darken($color-primary, 10%);
     }
 
     &:focus, &:active {
-        background: darken(#f1625f, 25%) !important;
+        background: darken($color-primary, 25%) !important;
     }
 }
 
 .btn-success {
     color: #fff;
-    background: #419b18;
+    background: $color-success;
 
     &:hover {
-        background: darken(#419b18, 5%);
+        background: darken($color-success, 5%);
     }
 }
 

@@ -9,6 +9,11 @@
     background-color: $color-black-default;
     color: #fff;
     transition: all $transition-duration linear;
+    opacity: 0.25;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 @media all and (min-width: $breakpoint-medium) {
@@ -16,9 +21,5 @@
     #back-to-top.active {
         z-index: 1;
         bottom: 10px;
-
-        &:hover {
-            background-color: #000;
-        }
     }
 }

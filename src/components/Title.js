@@ -19,5 +19,9 @@ export function Title(props) {
         return(
             <h2 className='title-tertiary'>{props.title}</h2>
         )
+    } else if(props.type === 'quaternary') {
+        return(
+            <h2 className='title-quaternary'>{props.title}</h2>
+        )
     }
 }

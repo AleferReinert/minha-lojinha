@@ -15,10 +15,7 @@
         position: relative;
         transition: background $transition-duration linear;
         padding-bottom: 15px;
-
-        &:hover {
-            background-color: #eceef0;
-        }
+        overflow: hidden;
     }
 
     img {
@@ -28,18 +25,20 @@
     .title {
         font-size: $font-14px;
         font-weight: 400;
-        padding: 10px 10px 5px;
+        padding: 10px 0 5px;
         letter-spacing: .5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    .price-with-discount {
+        margin-right: 5px;
+        color: $color-success;
+        font-weight: 500;
     }
     
     .price {
-        margin-right: 3px;
-        color: $color-success;
-        font-weight: 500;
-        padding: 0 10px;
-    }
-    
-    .old-price {
         text-decoration: line-through;
         color: #999;
         font-size: $font-14px;
@@ -60,5 +59,18 @@
 
     .product-list {
         grid-template-columns: repeat(4, 1fr);
+
+        .title {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .price-row {
+            padding: 0 10px;
+        }
+
+        li:hover {
+            background-color: #eceef0;
+        }
     }
 }

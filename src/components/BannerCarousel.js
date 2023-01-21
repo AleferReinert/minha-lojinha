@@ -3,7 +3,7 @@ import './BannerCarousel.scss';
 import { Link } from 'react-router-dom';
 
 export function BannerCarousel(props) {
-    const dataMobile = [
+    const bannersMobile = [
         {
             image: 'banner-1-mobile.jpg',
             description: 'Confira nossas ofertas',
@@ -21,7 +21,7 @@ export function BannerCarousel(props) {
         }
     ];
 
-    const dataDesktop = [
+    const bannersDesktop = [
         {
             image: 'banner-1-desktop.jpg',
             description: 'Confira nossas ofertas',
@@ -39,16 +39,16 @@ export function BannerCarousel(props) {
         }
     ];
 
-    let data = props.device === 'mobile' ? dataMobile : dataDesktop;
+    let banners = props.device === 'mobile' ? bannersMobile : bannersDesktop;
     
     return (
         <div className={'banner-carousel-' + props.device}>
             <Carousel fade={true} interval={3000} controls={props.controls}>
-                {data.map((slide, i) => {
+                {banners.map((banner, i) => {
                     return (
                         <Carousel.Item key={i}>
-                            <Link to={slide.url} title={slide.description}>
-                                <img src={process.env.PUBLIC_URL + '/banners/' + slide.image} alt={slide.description} />
+                            <Link to={banner.url} title={banner.description}>
+                                <img src={process.env.PUBLIC_URL + '/banners/' + banner.image} alt={banner.description} />
                             </Link>
                         </Carousel.Item>
                     )
