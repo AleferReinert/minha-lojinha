@@ -1,6 +1,6 @@
 import './ProductList.scss';
 import { Link } from 'react-router-dom';
-import { formatPrice } from './Global';
+import { formatPrice } from '../Global';
 
 export function ProductList() {
     const product = {

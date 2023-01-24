@@ -1,8 +1,8 @@
 import './ProductDetails.scss';
-import { ProductList } from '../../components/ProductList';
-import { Breadcrumb } from '../../components/Breadcrumb';
-import { Title } from '../../components/Title';
-import { RatingStars } from '../../components/RatingStars';
+import { ProductList } from '../../components/productList/ProductList';
+import { Breadcrumb } from '../../components/breadcrumb/Breadcrumb';
+import { Title } from '../../components/title/Title';
+import { Stars } from '../../components/stars/Stars';
 import { ImagesCarousel } from './ImagesCarousel'
 import { Sizes } from './Sizes';
 import { Colors } from './Colors';
@@ -75,11 +75,11 @@ function ProductDetails(props) {
             <Breadcrumb />
             <div className='container grid'>
                 <ProductTitle device='mobile' />
-                <RatingStars rating={calculateRating(product.ratings)} device='mobile' />
+                <Stars rating={calculateRating(product.ratings)} device='mobile' />
                 <ImagesCarousel images={product.images} />
                 <div className='product-info'>
                     <ProductTitle device='desktop' />
-                    <RatingStars rating={calculateRating(product.ratings)} device='desktop' />
+                    <Stars rating={calculateRating(product.ratings)} device='desktop' />
                     <p id='price-row'>
                         <span className='price-with-discount'>{formatPrice(product.priceWithDiscount)}</span>
                         <span className='price'>{formatPrice(product.price)}</span>

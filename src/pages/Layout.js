@@ -2,7 +2,7 @@ import './Layout.scss';
 import { Outlet } from "react-router-dom";
 import { Header } from '../components/header/Header'
 import { Footer } from '../components/footer/Footer'
-import { BackToTheTopOfThePage } from '../components/BackToTheTopOfThePage';
+import { ScrollToTop } from '../components/scrollToTop/ScrollToTop';
 
 const user = {
     firstName: 'João',
@@ -16,7 +16,7 @@ const Layout = () => {
       <Header isLoggedIn={false} username={user.firstName} />
       <Outlet />
       <Footer />
-      <BackToTheTopOfThePage />
+      <ScrollToTop />
     </>
   )
 };

@@ -1,4 +1,4 @@
-import { Title } from "../../components/Title";
+import { Title } from "../../components/title/Title";
 import Tab from 'react-bootstrap/Tab';
 import Accordion from 'react-bootstrap/Accordion';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

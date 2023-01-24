@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarO } from '@fortawesome/free-regular-svg-icons';
-import './RatingStars.scss'
+import './Stars.scss'
 
-export function RatingStars(props) {
+export function Stars(props) {
     const rating = props.rating;
 
     if(rating > 0) {

@@ -4,7 +4,7 @@ import './BrandsCarousel.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import { Title } from './Title';
+import { Title } from '../title/Title';
 
 function Arrow(props) {
     const { className, onClick } = props;
