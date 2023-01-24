@@ -1,8 +1,8 @@
-import { BannerCarousel } from '../components/BannerCarousel';
-import { ProductList } from '../components/ProductList';
-import { BrandsCarousel } from '../components/BrandsCarousel';
-import { Newsletter } from '../components/Newsletter';
-import { Title } from '../components/Title';
+import { BannerCarousel } from '../../components/BannerCarousel';
+import { ProductList } from '../../components/ProductList';
+import { BrandsCarousel } from '../../components/BrandsCarousel';
+import { Newsletter } from '../../components/Newsletter';
+import { Title } from '../../components/Title';
 
 const Home = () => {
     return (

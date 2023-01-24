@@ -6,22 +6,24 @@ import './RatingStars.scss'
 export function RatingStars(props) {
     const rating = props.rating;
 
-    return (
-        <div title={rating} className={'rating-stars ' + props.device}>
-            <div className='empty'>
-                <FontAwesomeIcon icon={faStarO} />
-                <FontAwesomeIcon icon={faStarO} />
-                <FontAwesomeIcon icon={faStarO} />
-                <FontAwesomeIcon icon={faStarO} />
-                <FontAwesomeIcon icon={faStarO} />
+    if(rating > 0) {
+        return (
+            <div title={rating} className={'rating-stars ' + props.device}>
+                <div className='empty'>
+                    <FontAwesomeIcon icon={faStarO} />
+                    <FontAwesomeIcon icon={faStarO} />
+                    <FontAwesomeIcon icon={faStarO} />
+                    <FontAwesomeIcon icon={faStarO} />
+                    <FontAwesomeIcon icon={faStarO} />
+                </div>
+                <div className='full' style={{ maxWidth: (rating * 20) + '%' }}>
+                    <FontAwesomeIcon icon={faStar} />
+                    <FontAwesomeIcon icon={faStar} />
+                    <FontAwesomeIcon icon={faStar} />
+                    <FontAwesomeIcon icon={faStar} />
+                    <FontAwesomeIcon icon={faStar} />
+                </div>
             </div>
-            <div className='full' style={{ maxWidth: (rating * 20) + '%' }}>
-                <FontAwesomeIcon icon={faStar} />
-                <FontAwesomeIcon icon={faStar} />
-                <FontAwesomeIcon icon={faStar} />
-                <FontAwesomeIcon icon={faStar} />
-                <FontAwesomeIcon icon={faStar} />
-            </div>
-        </div>
-    )
+        )
+    }
 }

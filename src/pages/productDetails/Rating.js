@@ -4,10 +4,9 @@ import { RatingStars } from '../../components/RatingStars';
 import { calculateRating } from '../../components/Global';
 
 export function Rating(props) {
-    return (
-        <div id='rating'>
-            <div className='container'>
-                <Title type='quaternary' title={`Avaliações (${props.ratings.length})`} />
+    const content = () => {
+        if (props.ratings.length > 0) {
+            return (
                 <div className='columns'>
                     <div className='column-left'>
                         <RatingStars rating={calculateRating(props.ratings)} />
@@ -35,6 +34,18 @@ export function Rating(props) {
                         })}
                     </ul>
                 </div>
+            )
+        } else {
+            return (
+                <p>Esse produto ainda não recebeu avaliações.</p>
+            )
+        }
+    }
+    return (
+        <div id='rating'>
+            <div className='container'>
+                <Title type='quaternary' title={`Avaliações (${props.ratings.length})`} />
+                {content()}
             </div>
         </div>
     )

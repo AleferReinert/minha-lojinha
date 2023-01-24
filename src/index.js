@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import NoPage from "./pages/NoPage";
-import Cart from "./pages/Cart";
-import Favorites from './pages/Favorites';
+import Home from "./pages/home/Home";
+import NoPage from "./pages/noPage/NoPage";
+import Cart from "./pages/cart/Cart";
+import Favorites from './pages/favorites/Favorites';
 import ProductDetails from './pages/productDetails/ProductDetails';
-import Support from './pages/Support';
-import About from './pages/About';
-import Login from './pages/Login';
-import Register from './pages/Register';
-
+import Support from './pages/support/Support';
+import About from './pages/about/About';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
 
 export default function App() {
     return (
@@ -40,8 +38,3 @@ root.render(
         <App />
     </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

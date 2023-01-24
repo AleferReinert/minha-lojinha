@@ -72,8 +72,8 @@ export function BrandsCarousel() {
                 <Slider {...settings}>
                     {brands.map((brand, i) => {
                         return (
-                            <div>
-                                <Link to='./' title={brand.name} key={i}>
+                            <div key={i}>
+                                <Link to='./' title={brand.name}>
                                     <img src={process.env.PUBLIC_URL + '/brands/' + brand.image} alt={brand.name} />
                                 </Link>
                             </div>
