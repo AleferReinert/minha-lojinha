@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useLayoutEffect} from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from "./pages/Layout";
 import Home from "./pages/home/Home";
 import NoPage from "./pages/noPage/NoPage";
@@ -12,22 +12,33 @@ import About from './pages/about/About';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 
+// Rola a página para o topo ao mudar de rota
+const Wrapper = ({ children }) => {
+    const location = useLocation();
+    useLayoutEffect(() => {
+        document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
+    return children
+}
+
 export default function App() {
     return (
         <BrowserRouter basename='/react-commerce'>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="*" element={<NoPage />} />
-                    <Route path="/carrinho" element={<Cart />} />
-                    <Route path="/lista-de-desejos" element={<Favorites />} />
-                    <Route path="/detalhes-do-produto" element={<ProductDetails id='page-product-details' />} />
-                    <Route path="/ajuda/:tab" element={<Support /> } />
-                    <Route path="/sobre-nos" element={<About /> } />
-                    <Route path="/entrar" element={<Login /> } />
-                    <Route path="/cadastro" element={<Register /> } />
-                </Route>
-            </Routes>
+            <Wrapper>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path="*" element={<NoPage />} />
+                        <Route path="/carrinho" element={<Cart />} />
+                        <Route path="/lista-de-desejos" element={<Favorites />} />
+                        <Route path="/detalhes-do-produto" element={<ProductDetails id='page-product-details' />} />
+                        <Route path="/ajuda/:tab" element={<Support />} />
+                        <Route path="/sobre-nos" element={<About />} />
+                        <Route path="/entrar" element={<Login />} />
+                        <Route path="/cadastro" element={<Register />} />
+                    </Route>
+                </Routes>
+            </Wrapper>
         </BrowserRouter>
     );
 }
