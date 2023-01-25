@@ -8,65 +8,28 @@ import { Sizes } from './Sizes';
 import { Colors } from './Colors';
 import { calculateParcel, formatPrice, calculateRating } from '../../components/Global';
 import { Rating } from './Rating';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import products from '../../products.json';
 
-const product = {
-    title: 'Camiseta Adicolor Classics Trefoil',
-    price: 149.99,
-    priceWithDiscount: 129.99,
-    discount: '-10%',
-    parcels: 3,
-    code: 'H06642',
-    description:
-        `O logo Trefoil é inspirado no esporte e na história do estilo. 
-        Mas é mais do que isso. Ele representa uma energia indomável e um clã de 
-        criadores que se esforçam para dar o seu melhor a cada passo. 
-        Vista o conforto desta camiseta adidas e deixe-os fluir. 
-        Ao comprar nossos produtos de algodão, você está apoiando um cultivo mais sustentável dessa matéria-prima.`,
-    details: [
-        'Modelagem padrão',
-        'Better Cotton Initiative',
-        'Gola careca canelada',
-        'Malha simples 100% algodão'
-    ],
-    images: [
-        { url: '1.webp', description: 'Frente' },
-        { url: '2.webp', description: '' },
-        { url: '3.webp', description: '' },
-        { url: '4.webp', description: 'Lado' },
-        { url: '5.webp', description: 'Costas' }
-    ],
-    ratings: [
-        {
-            user: 'Jéssica',
-            date: '18/01/2023',
-            rating: 5,
-            title: 'Amo essa blusa',
-            comment: 'Tecido incrível, estampa maravilhosa, tamanho ideal para uma mocinha rs'
-        },
-        {
-            user: 'Amanda',
-            date: '10/01/2023',
-            rating: 5,
-            title: 'Linda',
-            comment: 'Amo estas camisetas por ser tão confortável e combinar com tudo'
-        },
-        {
-            user: 'Flávia',
-            date: '21/12/2022',
-            rating: 4,
-            title: 'Muito boa',
-            comment: 'Ela tem um ótimo tamanho pra quem prefere blusas mais compridas e largas. Muito confortável'
+// Procura o produto na lista a partir do código
+function searchProduct(list, id) {
+    for(let item of list) {
+        if(item.code === id) {
+            return item;
         }
-    ]
+    }
 }
 
 function ProductDetails(props) {
-    document.body.id = props.id;
-    const navigate = useNavigate()
-    const ProductTitle = props => <h1 id='product-title' className={props.device}>{product.title}</h1>;
+    const { code } = useParams();
+    const product = searchProduct(products, code);
 
+    document.body.id = props.id;
+    const ProductTitle = props => <h1 id='product-title' className={props.device}>{product.name}</h1>;
+
+    
     // Redireciona os formulários
+    const navigate = useNavigate()
     const handleSubmitCart = () => navigate('/carrinho');
     const handleSubmitFavorites = () => navigate('/lista-de-desejos');
 
@@ -92,8 +55,8 @@ function ProductDetails(props) {
                         <span> {formatPrice(calculateParcel(product.parcels, product.priceWithDiscount))} </span>
                         sem juros
                     </p>
-                    <Sizes />
-                    <Colors />
+                    <Sizes sizes={product.sizes} />
+                    <Colors colors={product.colors} />
                     <form method='post' onSubmit={handleSubmitCart}>
                         <button id='btn-add-to-cart' type='submit' className='btn btn-success'>Adicionar ao carrinho</button>
                     </form>

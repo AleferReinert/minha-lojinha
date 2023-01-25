@@ -1,0 +1,175 @@
+[{
+    "name": "Camiseta Adicolor Classics Trefoil",
+    "price": 149.99,
+    "priceWithDiscount": 129.99,
+    "discount": "-10%",
+    "parcels": 3,
+    "code": "h06642",
+    "colors": [
+        { "color": "#ff0000", "title": "Vermelho" },
+        { "color": "#00ff00", "title": "Verde" },
+        { "color": "#0000ff", "title": "Azul" },
+        { "color": "#000", "title": "Preto" },
+        { "color": "#fff", "title": "Branco" }
+    ],
+    "sizes": ["pp","p","m","g","gg"],
+    "description": "O logo Trefoil é inspirado no esporte e na história do estilo. Mas é mais do que isso. Ele representa uma energia indomável e um clã de criadores que se esforçam para dar o seu melhor a cada passo. Vista o conforto desta camiseta adidas e deixe-os fluir. Ao comprar nossos produtos de algodão, você está apoiando um cultivo mais sustentável dessa matéria-prima.",
+    "details": ["Modelagem padrão","Better Cotton Initiative","Gola careca canelada","Malha simples 100% algodão"],
+    "images": [
+        { "url": "H06642_1.webp", "description": "Frente" },
+        { "url": "H06642_2.webp", "description": "" },
+        { "url": "H06642_3.webp", "description": "" },
+        { "url": "H06642_4.webp", "description": "Lado" },
+        { "url": "H06642_5.webp", "description": "Costas" }
+    ],
+    "ratings": [
+        {
+            "user": "Jéssica",
+            "date": "18/01/2023",
+            "rating": 5,
+            "title": "Amo essa blusa",
+            "comment": "Tecido incrível, estampa maravilhosa, tamanho ideal para uma mocinha rs"
+        },
+        {
+            "user": "Amanda",
+            "date": "10/01/2023",
+            "rating": 5,
+            "title": "Linda",
+            "comment": "Amo estas camisetas por ser tão confortável e combinar com tudo"
+        },
+        {
+            "user": "Flávia",
+            "date": "21/12/2022",
+            "rating": 4,
+            "title": "Muito boa",
+            "comment": "Ela tem um ótimo tamanho pra quem prefere blusas mais compridas e largas. Muito confortável"
+        }
+    ]
+},
+{
+    "name": "Calça Adicolor Classics Primeblue SST",
+    "price": 349.99    ,
+    "priceWithDiscount": 299.99,
+    "discount": "-10%",
+    "parcels": 7,
+    "code": "gf0210",
+    "colors": [
+        { "color": "#000", "title": "Preto" },
+        { "color": "#112039", "title": "Azul" }
+    ],
+    "sizes": ["p","m","g","gg"],
+    "description": "Os rumores são de que a adidas criou o agasalho de treino em 64. Não podemos confirmar, mas as Três Listras estiveram décadas à frente nos gramados, nos estádios, nas ruas e em todos os lugares entre eles. Não importa onde você esteja, elas parecem sempre estar em casa. A calça esportiva é prova incontestável disso. Sinônimo de descontração e conforto, o tecido macio é confeccionado com fio Parley Ocean Plastic, proveniente de resíduos plásticos reciclados.",
+    "details": ["Modelagem justa","Bolsos frontais com zíper","Cós elástico e cordão","Barras caneladas","Malha interlock 60% poliéster reciclado, 40% algodão","Pernas afuniladas"],
+    "images": [
+        { "url": "GF0210_1.webp", "description": "Frente" },
+        { "url": "GF0210_2.webp", "description": "Costas" },
+        { "url": "GF0210_3.webp", "description": "Frente" },
+        { "url": "GF0210_4.webp", "description": "Costas" }
+    ],
+    "ratings": [
+        {
+            "user": "Agnelo",
+            "date": "24/01/2023",
+            "rating": 5,
+            "title": "Ótima",
+            "comment": "Linda, veste super bem, produto igual ao anúncio recomendo"
+        },
+        {
+            "user": "Letícia",
+            "date": "25/01/2023",
+            "rating": 1,
+            "title": "A cor das calças é diferente da que comprei",
+            "comment": "O casaco é mais escuro e as calças são mais claras mesmo com a referência igual tem uma diferença"
+        }
+    ]
+},
+{
+    "name": "Jaqueta Adicolor Classics Primeblue SST",
+    "price": 399.99    ,
+    "priceWithDiscount": 299.99,
+    "discount": "-25%",
+    "parcels": 7,
+    "code": "gf0198",
+    "colors": [
+        { "color": "#000", "title": "Preto" }
+    ],
+    "sizes": ["p","m","g"],
+    "description": "Não estamos dizendo que a adidas lançou o agasalho esportivo em 64. Mas não significa que os outros não tenham dito. O que é inegável é que as Três Listras estão aí há décadas, seja nos campos, nos estádios ou nas ruas. Ela já foi adotada por todos, de jogadores de futebol a adeptos da vida noturna, e agora você também pode usar esta jaqueta. Como bônus adicional, ela é extremamente confortável e produzida com o fio Parley Ocean Plastic, proveniente de resíduos plásticos reciclados.",
+    "details": ["Modelagem padrão","Bolsos frontais com zíper","Punhos e barra canelados","Malha interlock 60% poliéster reciclado, 40% algodão","Gola canelada"],
+    "images": [
+        { "url": "GF0198_1.webp", "description": "Frente" },
+        { "url": "GF0198_2.webp", "description": "Costas" }
+    ],
+    "ratings": [
+        {
+            "user": "Isabel",
+            "date": "23/01/2023",
+            "rating": 5,
+            "title": "Foi uma escolha acertada!",
+            "comment": "O casaco tem uma cor muito bonita e é bastante confortável."
+        },
+        {
+            "user": "Ana",
+            "date": "25/01/2023",
+            "rating": 5,
+            "title": "Muito bonito",
+            "comment": "Veste muito bem, excelente qualidade, cor muito bonita."
+        },
+        {
+            "user": "Felipe",
+            "date": "31/08/2022",
+            "rating": 5,
+            "title": "muito bonito esse casaco",
+            "comment": "design lindo, qualidade absurda, compraria dnv sem dúvidas"
+        },
+        {
+            "user": "Rodrigo",
+            "date": "05/01/2023",
+            "rating": 4,
+            "title": "Bom casaco",
+            "comment": "Gostei do casaco e bonito e confortável fica muito bem com calças de ganga"
+        }
+    ]
+},
+{
+    "name": "Moletom Capuz Adventure Winter Fabric",
+    "price": 499.99    ,
+    "priceWithDiscount": 349.99,
+    "discount": "-30%",
+    "parcels": 8,
+    "code": "hk5020",
+    "colors": [],
+    "sizes": ["p","m","g","gg"],
+    "description": "Perfeito para dias frios e pronto para ambientes externos, este moletom com capuz adidas é o melhor companheiro das aventuras. Inspirado nos designs dos arquivos para trilhas, seu fecho de zíper sobe até a altura do capuz ajustável por cordão, oferecendo a opção de um look relaxado ou mais justo. A combinação de fleece polar e tecido CORDURA® resistente mantém você confortável, aquecido e seco. Vista facilmente este moletom com capuz sobre sua camiseta favorita, graças à modelagem folgada, e guarde o que você mais precisa nos bolsos frontais com zíper.",
+    "details": ["Modelagem folgada","Fecho de zíper e capuz ajustável por cordão elástico","Punhos elásticos","Polar fleece 100% poliéster reciclado","Tecido com sobreposições CORDURA"],
+    "images": [
+        { "url": "HK5020_1.webp", "description": "Frente" },
+        { "url": "HK5020_2.webp", "description": "Gola" },
+        { "url": "HK5020_3.webp", "description": "Frente" },
+        { "url": "HK5020_4.webp", "description": "Lado" },
+        { "url": "HK5020_5.webp", "description": "Costas" }
+    ],
+    "ratings": [
+        {
+            "user": "Simon",
+            "date": "23/01/2023",
+            "rating": 5,
+            "title": "Melhor jaqueta que comprei!",
+            "comment": "É um jaqueta/moletom super confortável, flexível e ajustável. Eu uso M, e o tamanho M que selecionei é bem folgadinho, permitindo que se mova com mais praticidade."
+        },
+        {
+            "user": "Shirley",
+            "date": "20/01/2023",
+            "rating": 5,
+            "title": "Ótimo tecido e caimento perfeito. Muito versátil.",
+            "comment": "Blusa versátil para climas frios e ate noite mais quentes. Uma junção de dois tecidos, fazendo ser resistente a chuva tb. Muito bom."
+        },
+        {
+            "user": "ZaVilla",
+            "date": "24/01/2023",
+            "rating": 5,
+            "title": "Bonito, confortável, quente, funcional,ecológico.",
+            "comment": "Casaco com capuz, forrado, quente indicado para inverno ou dias frios. Feito com tecido ecológico ( reciclado) leve, ocupa pouco espaço quando dobrado. Bolsos amplos com zíper para celular, carteira ou chaves."
+        }
+    ]
+}]

@@ -29,9 +29,9 @@ export default function App() {
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />} />
                         <Route path="*" element={<NoPage />} />
-                        <Route path="/carrinho" element={<Cart />} />
+                        <Route path="/carrinho" element={<Cart id='page-cart' />} />
                         <Route path="/lista-de-desejos" element={<Favorites />} />
-                        <Route path="/detalhes-do-produto" element={<ProductDetails id='page-product-details' />} />
+                        <Route path="/:name/:code" element={<ProductDetails id='page-product-details' />} />
                         <Route path="/ajuda/:tab" element={<Support />} />
                         <Route path="/sobre-nos" element={<About />} />
                         <Route path="/entrar" element={<Login />} />

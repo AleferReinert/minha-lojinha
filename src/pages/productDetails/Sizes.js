@@ -1,13 +1,12 @@
 import './Sizes.scss';
 
-export function Sizes() {
-    const sizes = ['pp', 'p', 'm', 'g', 'gg'];
+export function Sizes(props) {
 
     return (
         <div id='sizes'>
             <h2>Tamanhos</h2>
             <ul>
-                {sizes.map((size, i) => {
+                {props.sizes.map((size, i) => {
                     return (
                         <li key={i}>
                             <label>
