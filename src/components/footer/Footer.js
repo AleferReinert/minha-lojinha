@@ -1,7 +1,8 @@
 import './Footer.scss';
-import { Social } from './Social';
+import { Social } from '../social/Social';
 import { Accordion } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import company from '../../dataCompany.json';
 
 export function Footer() {
     return (
@@ -16,7 +17,6 @@ export function Footer() {
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <ul className='list'>
-                                        <li><a href='/' target='_blank'>Blog</a></li>
                                         <li><Link to='/lojas'>Lojas</Link></li>
                                         <li><Link to='/politica-de-privacidade'>Política de privacidade</Link></li>
                                         <li><Link to='/sobre-nos'>Sobre nós</Link></li>
@@ -45,9 +45,9 @@ export function Footer() {
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <ul className='list'>
-                                        <li><a href='./'>Tel.: (47) 55555-5555</a></li>
-                                        <li><a href='./'>Tel.2: (47) 55555-5555</a></li>
-                                        <li><a href='./'>E-mail: atendimento@loja.com.br</a></li>
+                                        <li><a href='./'>Tel.: {company.tel}</a></li>
+                                        <li><a href='./'>Tel.2: {company.tel2}</a></li>
+                                        <li><a href='./'>E-mail: {company.email}</a></li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -88,12 +88,17 @@ export function Footer() {
             <div className='bar-bottom'>
                 <div className='address'>
                     <div className='container'>
-                        <p>E-Commerce Comércio LTDA - CNPJ 00.000.000/0000-00</p>
-                        <address>Rua Ricardo Fischer Stein, 438 - Bairro Nações - Indaial - SC - CEP 89086-172</address>
+                        <p>
+                            {company.address.companyName} - CNPJ {company.address.cnpj}
+                        </p>
+                        <address>
+                            Rua {company.address.street}, {company.address.number} - 
+                            Bairro {company.address.district} - 
+                            {company.address.city} - {company.address.state} - CEP {company.address.zipCode}
+                        </address>
                     </div>
                 </div>
             </div>
         </footer>
-
     )
 }

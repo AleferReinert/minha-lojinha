@@ -1,73 +1,86 @@
-import { Categories } from "./Categories";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faSignOutAlt, faShoppingCart, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faUser, faSignInAlt, faSignOutAlt, faShoppingCart, faHeart, faUserPlus, faClose } from '@fortawesome/free-solid-svg-icons';
 import './MenuMobile.scss';
 import { Accordion } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
+import categories from '../../dataCategories.json';
+import { formatUrl } from "../Global";
+import { useState } from "react";
 
-export function MenuMobile(props){
-
-    function closeMenu(){
-        props.setMenuMobile(null);
-    }
+export function MenuMobile(props) {
+    const [state, setState] = useState(false);
+    const toggleMenu = ()=>setState(!state);
+    const closeMenu = ()=>setState(false);
 
     const navUser = () => {
-        if(props.isLoggedIn){
-            return(
-                <ul>
-                    <li>
-                        <Accordion defaultActiveKey="1">
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>
+        if (props.isLoggedIn) {
+            return (
+                <>
+                    <Dropdown.Item as={Accordion} className='dropdown-item-accordion'>
+                        <Accordion.Item>
+                            <Accordion.Header>
+                                <FontAwesomeIcon icon={faUser} />
+                                Olá, {props.username}
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                <Link to="/minha-conta/dados" onClick={closeMenu}>
                                     <FontAwesomeIcon icon={faUser} />
-                                    Olá, João
-                                </Accordion.Header>
-                                <Accordion.Body>
-                                    <nav id="nav-account">
-                                        <Link to="/">
-                                            <span><FontAwesomeIcon icon={faUser} /></span>
-                                            <span>Meus Dados</span>
-                                        </Link>
-                                        <Link to="/">
-                                            <span><FontAwesomeIcon icon={faShoppingCart} /></span>
-                                            <span>Meus Pedidos</span>
-                                        </Link>
-                                        <Link to="/">
-                                            <span><FontAwesomeIcon icon={faHeart} /></span>
-                                            <span>Lista de Desejos</span>
-                                        </Link>
-                                    </nav>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </li>
-                    <li>
-                        <Link to="/">
-                            <FontAwesomeIcon icon={faSignOutAlt} />
-                            Sair
-                        </Link>
-                    </li>
-                </ul>
+                                    Meus Dados
+                                </Link>
+                                <Link to="/minha-conta/pedidos" onClick={closeMenu}>
+                                    <FontAwesomeIcon icon={faShoppingCart} />
+                                    Meus Pedidos
+                                </Link>
+                                <Link to="/lista-de-desejos" onClick={closeMenu}>
+                                    <FontAwesomeIcon icon={faHeart} />
+                                    Lista de Desejos
+                                </Link>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/logout" onClick={closeMenu}>
+                        <FontAwesomeIcon icon={faSignOutAlt} />
+                        Sair
+                    </Dropdown.Item>
+                </>
             )
         } else {
-            return(
-                <ul>
-                    <li><Link to="/entrar">Entrar</Link></li>
-                    <li><Link to="/">Cadastre-se</Link></li>
-                </ul>
+            return (
+                <>
+                    <Dropdown.Item as={Link} to="/entrar" onClick={closeMenu}>
+                        <FontAwesomeIcon icon={faSignInAlt} />
+                        Entrar
+                    </Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/cadastro" onClick={closeMenu}>
+                        <FontAwesomeIcon icon={faUserPlus} />
+                        Cadastre-se
+                    </Dropdown.Item>
+                </>
             )
         }
-    };
+    }
     return (
-        <>
-            <div id="menu-mobile" className={props.menuMobile} onClick={closeMenu}>
-                <button className="btn-close"></button>
-                <nav className="nav-user">
-                    { navUser() }
-                </nav>
-                <Categories id="categories-mobile" />
-            </div>
-            <div id="overlay" className={props.menuMobile}></div>
-        </>
-    );
+        <Dropdown as='nav' show={state} id='dropdown-menu-mobile'>
+            <Dropdown.Toggle variant="default" onClick={toggleMenu}>
+                <FontAwesomeIcon icon={faBars} />
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+                <button className='close-menu' onClick={closeMenu}>
+                    <FontAwesomeIcon icon={faClose} />
+                </button>
+                {navUser()}
+                <Dropdown.Divider />
+                {categories.map((category, i) => {
+                    const url = '/categoria' + formatUrl(category.name);
+
+                    return (
+                        <Dropdown.Item as={Link} to={url} key={i} onClick={closeMenu}>
+                            {category.name}
+                        </Dropdown.Item>
+                    )
+                })}
+            </Dropdown.Menu>
+        </Dropdown>
+    )
 }

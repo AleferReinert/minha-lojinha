@@ -4,50 +4,34 @@ import { MenuMobile } from './MenuMobile';
 import { TextCarousel } from './TextCarousel';
 import { Search } from './Search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faBars, faMagnifyingGlass, faClose } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faMagnifyingGlass, faClose } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as faHeartO } from '@fortawesome/free-regular-svg-icons';
 import { Categories } from './Categories';
 import { DropdownUser } from './DropdownUser';
 import { Link } from "react-router-dom";
+import company from '../../dataCompany.json';
 
 export function Header(props) {
-    const [menuMobile, setMenuMobile] = useState(null);
     const [searchMobile, setSearchMobile] = useState('');
 
-    function toggleMenuMobile() {
-        if (menuMobile === null) {
-            setMenuMobile('active');
-        } else {
-            setMenuMobile(null);
-        }
-    }
-
     function toggleSearchMobile() {
-        if (searchMobile === '') {
-            setSearchMobile('active');
-        } else {
-            setSearchMobile('');
-        }
+        searchMobile === '' ? setSearchMobile('active') : setSearchMobile('');
     }
 
     const btnSearchMobile = () => {
-        if (searchMobile === '') {
-            return (
-                <button title="Abrir busca" id="open-search-mobile" onClick={toggleSearchMobile}>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </button>
-            )
-        }
+        let title = searchMobile === '' ? 'Abrir busca' : 'Fechar busca';
+        let id = searchMobile === '' ? 'open-search-mobile' : 'close-search-mobile';;
+        let icon = searchMobile === '' ? faMagnifyingGlass : faClose;
+
         return (
-            <button title="Fechar busca" id="close-search-mobile" onClick={toggleSearchMobile}>
-                <FontAwesomeIcon icon={faClose} />
+            <button title={title} id={id} onClick={toggleSearchMobile}>
+                <FontAwesomeIcon icon={icon} />
             </button>
         )
     }
 
     return (
         <header id="header">
-            <MenuMobile isLoggedIn={props.isLoggedIn} menuMobile={menuMobile} setMenuMobile={setMenuMobile} />
             <div className="bar-top">
                 <div className="container">
                     <TextCarousel />
@@ -59,14 +43,12 @@ export function Header(props) {
             <div className="bar-middle">
                 <div className="container">
                     <div className="column">
-                        <button className='btn-menu-mobile' onClick={toggleMenuMobile}>
-                            <FontAwesomeIcon icon={faBars} />
-                        </button>
+                    <MenuMobile isLoggedIn={props.isLoggedIn} username={props.username} />
                     </div>
                     <div className="column">
                         <div className="logo">
-                            <Link to="/">
-                                <img src={process.env.PUBLIC_URL + '/logo.png'} alt="minha lojinha" />
+                            <Link to="/" title={company.name}>
+                                <img src={process.env.PUBLIC_URL + '/' + company.logo} alt="minha lojinha" />
                             </Link>
                         </div>
                     </div>
@@ -74,7 +56,7 @@ export function Header(props) {
                         <Search searchMobile={searchMobile} />
                     </div>
                     <div className="column">
-                        { btnSearchMobile() }
+                        {btnSearchMobile()}
                         <Link to="/lista-de-desejos" className="favorites" title="Lista de desejos (2 itens)">
                             Lista de desejos
                             <FontAwesomeIcon icon={faHeartO} />

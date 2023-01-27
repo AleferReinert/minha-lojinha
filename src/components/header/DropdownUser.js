@@ -14,15 +14,15 @@ export function DropdownUser(props){
                             Olá, { props.username }
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="dropdown-account" align="end">
-                            <Dropdown.Item href="./">
+                            <Dropdown.Item as={Link} to="/minha-conta/dados">
                                 <FontAwesomeIcon icon={faUser} />
                                 Meus Dados
                             </Dropdown.Item>
-                            <Dropdown.Item href="./">
+                            <Dropdown.Item as={Link} to="/minha-conta/pedidos">
                                 <FontAwesomeIcon icon={faShoppingCart} />
                                 Meus Pedidos
                                 </Dropdown.Item>
-                            <Dropdown.Item href="./">
+                            <Dropdown.Item as={Link} to="/lista-de-desejos">
                                 <FontAwesomeIcon icon={faHeart} />
                                 Lista de Desejos
                                 </Dropdown.Item>

@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { Title } from '../title/Title';
+import brands from '../../dataBrands.json';
+import { formatUrl } from '../Global';
 
 function Arrow(props) {
     const { className, onClick } = props;
@@ -16,25 +18,8 @@ function Arrow(props) {
 }
 
 export function BrandsCarousel() {
-    const brands = [
-        { image: 'adidas.png', name: 'Adidas' },
-        { image: 'calvin-klein.png', name: 'Calvin Klein' },
-        { image: 'cavalera.png', name: 'Cavalera' },
-        { image: 'colcci.png', name: 'Colcci' },
-        { image: 'converse.png', name: 'Converse' },
-        { image: 'everlast.png', name: 'Everlast' },
-        { image: 'fila.png', name: 'Fila' },
-        { image: 'lacoste.png', name: 'Lacoste' },
-        { image: 'mizuno.png', name: 'Mizuno' },
-        { image: 'mormaii.png', name: 'Mormaii' }, 
-        { image: 'nike.png', name: 'Nike' },
-        { image: 'oakley.png', name: 'Oakley' },
-        { image: 'puma.png', name: 'Puma' },
-        { image: 'ray-ban.png', name: 'Ray Ban' },
-        { image: 'vans.png', name: 'Vans' }
-    ];
-    var settings = {
-        autoplay: true,
+    const settings = {
+        autoplay: false,
         autoPlaySpeed: 1000,
         arrows: true,
         dots: false,
@@ -71,10 +56,14 @@ export function BrandsCarousel() {
                 <Title type='primary' title='Marcas' />
                 <Slider {...settings}>
                     {brands.map((brand, i) => {
+                        const name = brand.name;
+                        const src = process.env.PUBLIC_URL + '/brands/' + brand.image;
+                        const url = formatUrl(brand.name);
+
                         return (
                             <div key={i}>
-                                <Link to='./' title={brand.name}>
-                                    <img src={process.env.PUBLIC_URL + '/brands/' + brand.image} alt={brand.name} />
+                                <Link to={url} title={name}>
+                                    <img src={src} alt={name} />
                                 </Link>
                             </div>
                         )

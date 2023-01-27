@@ -1,0 +1,62 @@
+[
+    {
+        "image": "adidas.png",
+        "name": "Adidas"
+    },
+    {
+        "image": "calvin-klein.png",
+        "name": "Calvin Klein"
+    },
+    {
+        "image": "cavalera.png",
+        "name": "Cavalera"
+    },
+    {
+        "image": "colcci.png",
+        "name": "Colcci"
+    },
+    {
+        "image": "converse.png",
+        "name": "Converse"
+    },
+    {
+        "image": "everlast.png",
+        "name": "Everlast"
+    },
+    {
+        "image": "fila.png",
+        "name": "Fila"
+    },
+    {
+        "image": "lacoste.png",
+        "name": "Lacoste"
+    },
+    {
+        "image": "mizuno.png",
+        "name": "Mizuno"
+    },
+    {
+        "image": "mormaii.png",
+        "name": "Mormaii"
+    },
+    {
+        "image": "nike.png",
+        "name": "Nike"
+    },
+    {
+        "image": "oakley.png",
+        "name": "Oakley"
+    },
+    {
+        "image": "puma.png",
+        "name": "Puma"
+    },
+    {
+        "image": "ray-ban.png",
+        "name": "Ray Ban"
+    },
+    {
+        "image": "vans.png",
+        "name": "Vans"
+    }
+]

@@ -17,3 +17,8 @@ export function calculateRating(array) {
     const rating = (sum / array.length).toFixed(1);
     return rating;
 }
+
+// Formata url
+export function formatUrl(url) {
+    return '/' + url.toLowerCase().replace(/ /g,'-');
+}

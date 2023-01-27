@@ -1,17 +1,20 @@
 import './Categories.scss';
 import { Link } from 'react-router-dom';
+import categories from '../../dataCategories.json';
+import { formatUrl } from '../Global';
 
 export function Categories(props) {
     return (
         <nav id={props.id}>
-            <Link to="/categoria/masculino">Masculino</Link>
-            <Link to="/categoria/feminino">Feminino</Link>
-            <Link to="/categoria/infantil">Infantil</Link>
-            <Link to="/categoria/básico">Básico</Link>
-            <Link to="/categoria/esportes">Esportes</Link>
-            <Link to="/categoria/novidades">Novidades</Link>
-            <Link to="/categoria/ofertas">Ofertas</Link>
-            <Link to="/categoria/outlet">Outlet</Link>
+            {categories.map((category, i)=>{
+                const url = '/categoria' + formatUrl(category.name);
+                
+                return(
+                    <Link to={url} key={i}>
+                        {category.name}
+                    </Link>
+                )
+            })}
         </nav>
     )
 }

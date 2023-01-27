@@ -1,0 +1,39 @@
+{
+    "name": "Minha Lojinha",
+    "logo": "logo.png",
+    "tel": "(47) 9555-5555",
+    "tel2": "(47) 9777-7777",
+    "email": "atendimento@loja.com.br",
+    "address": {
+        "companyName": "E-Commerce Comércio LTDA",
+        "cnpj": "00.000.000/0000-00",
+        "street": "Ricardo Fischer Stein",
+        "number": "438",
+        "district": "Nações",
+        "city": "Indaial",
+        "state": "SC",
+        "zipCode": "89086-172"
+    },
+    "social": [
+        {
+            "name": "Facebook",
+            "url": "https://facebook.com"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://instagram.com"
+        },
+        {
+            "name": "Whatsapp",
+            "url": "https://web.whatsapp.com/send?phone=5547955555555"
+        },
+        {
+            "name": "Pinterest",
+            "url": "https://pinterest.com"
+        },
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com"
+        }
+    ]
+}

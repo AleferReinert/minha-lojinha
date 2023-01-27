@@ -11,6 +11,7 @@ import Support from './pages/support/Support';
 import About from './pages/about/About';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
+import Category from './pages/category/Category';
 
 // Rola a página para o topo ao mudar de rota
 const Wrapper = ({ children }) => {
@@ -31,11 +32,12 @@ export default function App() {
                         <Route path="*" element={<NoPage />} />
                         <Route path="/carrinho" element={<Cart id='page-cart' />} />
                         <Route path="/lista-de-desejos" element={<Favorites />} />
-                        <Route path="/:name/:code" element={<ProductDetails id='page-product-details' />} />
+                        <Route path="/produto/:name/:code" element={<ProductDetails id='page-product-details' />} />
                         <Route path="/ajuda/:tab" element={<Support />} />
                         <Route path="/sobre-nos" element={<About />} />
                         <Route path="/entrar" element={<Login />} />
                         <Route path="/cadastro" element={<Register />} />
+                        <Route path="/categoria/:category" element={<Category />} />
                     </Route>
                 </Routes>
             </Wrapper>

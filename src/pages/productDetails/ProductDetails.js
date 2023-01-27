@@ -9,7 +9,7 @@ import { Colors } from './Colors';
 import { calculateParcel, formatPrice, calculateRating } from '../../components/Global';
 import { Rating } from './Rating';
 import { useNavigate, useParams } from "react-router-dom";
-import products from '../../products.json';
+import products from '../../dataProducts.json';
 
 // Procura o produto na lista a partir do código
 function searchProduct(list, id) {
@@ -27,7 +27,6 @@ function ProductDetails(props) {
     document.body.id = props.id;
     const ProductTitle = props => <h1 id='product-title' className={props.device}>{product.name}</h1>;
 
-    
     // Redireciona os formulários
     const navigate = useNavigate()
     const handleSubmitCart = () => navigate('/carrinho');

@@ -1,0 +1,36 @@
+{
+    "mobile": [
+        {
+            "image": "banner-1-mobile.jpg",
+            "description": "Confira nossas ofertas",
+            "url": "./"
+        },
+        {
+            "image": "banner-2-mobile.jpg",
+            "description": "Linha infantil",
+            "url": "./"
+        },
+        {
+            "image": "banner-3-mobile.jpg",
+            "description": "Lançamentos 2023",
+            "url": "./"
+        }
+    ],
+    "desktop": [
+        {
+            "image": "banner-1-desktop.jpg",
+            "description": "Confira nossas ofertas",
+            "url": "./"
+        },
+        {
+            "image": "banner-2-desktop.jpg",
+            "description": "Linha infantil",
+            "url": "./"
+        },
+        {
+            "image": "banner-3-desktop.jpg",
+            "description": "Lançamentos 2023",
+            "url": "./"
+        }
+    ]
+}
