@@ -7,4 +7,21 @@
         grid-template-columns: 1fr 300px;
         column-gap: 30px;
     }
+
+    .table {
+        text-align: center;
+
+        img {
+            width: 60px;
+        }
+
+        td {
+            vertical-align: middle;
+        }
+
+        th:nth-child(2), 
+        td:nth-child(2) {
+            text-align: left;
+        }
+    }
 }
